@@ -1,9 +1,9 @@
 
-# Ejercicio 1
+# Ejercicios
 
 [ejercicio 1](ejercicio-1)
 
-## Ejercicio Nº1:
+## Ejercicio 1:
 ### Diagrama de flujo
 Desarolle un algoritmo que permita leer dos valores distintos,determinar cual de los mayor y escribirlo.
 <img src="images/diagrama%20de%20flujo.drawio.png"/>
@@ -18,3 +18,8 @@ Desarolle un algoritmo que permita leer dos valores distintos,determinar cual de
 - __Si A=B Entonces vuelve a el inicio__ 
 - __Si A>B entonces esbribir "A es el mayor"__ o de lo contrario __Escribir "B, es el mayor"__
 - Fin
+
+## Ejercicio 
+### Diagrama de flujo
+Desarolle un algoritmo que permita leer 3 valores y almacenarlos en las variables A, B y c respectivamente. El algoritmo debe impirmir cuel es el mayo y cuel el menor. Recuerde contestar que los tres valores introducidos por el teclado sean valores distintos. Pressente un mensaje de alerta en caso de que se detecte la introduccion de valores iguales.
+<img src="images/diagrama_de_flujo2.drawio.png"/>
