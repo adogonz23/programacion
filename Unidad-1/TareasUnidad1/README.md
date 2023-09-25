@@ -1,3 +1,5 @@
+<div aling="justify">
+
 ## Ejercicios
  
 ### Ejercicio 2
@@ -12,14 +14,16 @@ que se detecte la introducción de valores iguales.
 ### Pseudocodigo
 
 - Inicio
-- Inicializar las variables A, B y C
-- Leer los tres valores
-- Almacenar en las variables A, B
-   y C
-- Si A > B y A > C Entonces
-- Escribir A “Es el mayor”
-- Si B > A y B > C Entonces  escribir B “Es el mayor”
-- Sino  Escribir C “Es el mayor”
-- Fin_Si
-- Fin_Si
-- Fin
+  - Inicializar las variables A, B y C
+  - Leer los tres valores
+  - Almacenar en las variables A, B
+     y C
+  - Si A > B y A > C Entonces
+  - Escribir A “Es el mayor”
+  - Si B > A y B > C Entonces  escribir B “Es el mayor”
+  - Sino  Escribir C “Es el mayor”
+  - Fin_Si
+  - Fin_Si
+  - Fin+
+
+</div>
