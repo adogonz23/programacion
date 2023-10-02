@@ -53,7 +53,7 @@ Realice un algoritmo que a partir de proporcionarle la velocidad de un automóvi
  // Multiplicarlo por 1000 y dividirlo entre 3600
 
  int velocidadKm ;
- int velocidadMs =( velocidadKm * 1000 % 3600 );
+ int velocidadMs =( velocidadKm * 1000 / 3600 );
  
 
  
