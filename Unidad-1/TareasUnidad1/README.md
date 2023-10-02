@@ -25,5 +25,10 @@ que se detecte la introducción de valores iguales.
   - Fin_Si
   - Fin_Si
   - Fin+
+### Ejercicio 3
+Desarrolle un algoritmo que realice la sumatoria de los números enteros comprendidos entre el 1 y el 10, es decir, 1 + 2 + 3 + …. + 10. Utilia un buble __for__ y un bucle __while__.
+
+### Diagrama de flujo.
+<img src = "iamges/
 
 </div>
