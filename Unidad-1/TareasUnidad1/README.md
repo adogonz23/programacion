@@ -25,13 +25,36 @@ que se detecte la introducción de valores iguales.
   - Fin_Si
   - Fin_Si
   - Fin+
-### Ejercicio 3
-Desarrolle un algoritmo que realice la sumatoria de los números enteros comprendidos entre el 1 y el 10, es decir, 1 + 2 + 3 + …. + 10. Utilia un buble __for__ y un bucle __while__.
+### Ejercicio 6
 
-### Diagrama de flujo.
-<img src = "iamges/Ejercicio3.drawio.png">
+Desarrolle un algoritmo que permita leer un valor entero positivo N y determinar si es primo o no.
 
-### Pseudocodigo
+### Codigo
+
+public static void numeroPrimo(int num) {
+    boolean primo = true; 
+    for(int i = 2; i < num; i++) {
+        if (num % i == 0) {
+            prime = false;
+            break;
+        }
+    }
+    if (primo)
+        View.input("el numero es primo");
+    else
+        View.input("el numero no es primo.");
+}
+
+### Ejercicio 7
+
+Realice un algoritmo que a partir de proporcionarle la velocidad de un automóvil, expresada en kilómetros por hora, proporcione la velocidad en metros por segundo.
+
+### Codigo
+ // Multiplicarlo por 1000 y dividirlo entre 3600
+
+ int velocidadKm ;
+ int velocidadMs =( velocidadKm * 1000 % 3600 );
+ 
 
  
 </div>
