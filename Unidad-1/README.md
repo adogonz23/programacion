@@ -1,7 +1,7 @@
 
 # Ejercicios
 
-[ejercicio 1](ejercicio-1)
+[ejercicio 1](ejercicio1)
 
 ## Ejercicio 1:
 ### Diagrama de flujo
