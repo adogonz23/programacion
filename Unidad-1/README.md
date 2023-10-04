@@ -3,7 +3,7 @@
 
 [Ejercicio 1](Ejercicio-1)
 
-## Ejercicio 1:
+## Ejercicio-1:
 ### Diagrama de flujo
 Desarolle un algoritmo que permita leer dos valores distintos,determinar cual de los mayor y escribirlo.
 <img src="images/diagrama%20de%20flujo.drawio.png"/>
