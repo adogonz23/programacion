@@ -14,8 +14,8 @@ public class Tarea2 {
         System.out.println("Numeros perfectos entre" + valorMin + "y"+ valorMax + ":");
         for(; valorMin <= valorMax; valorMin++){      // el arco de numeros que vamos a comprobar
             suma = 0;
-            for(div = 1; div < valorMin;divisor++){    // "div" son los divisores. Se divide desde 1 hasta "valorMin"-1                          
-                 if(valorMin % divisor == 0){
+            for(div = 1; div < valorMin;div++){    // "div" son los divisores. Se divide desde 1 hasta "valorMin"-1                          
+                 if(valorMin % div == 0){
                     suma = suma + div; // si es divisor se suma
                  }
             }
