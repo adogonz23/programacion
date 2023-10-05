@@ -9,7 +9,7 @@ Un número perfecto es aquel que es igual a la suma de sus divisores propios (ex
 El ejercicio consiste en escribir un programa que encuentre e imprima todos los números perfectos en un rango dado (por ejemplo, entre 1 y 1000)
 
 ### diagrama de flujo
-<img src="images/diagrama_de_flujo2.drawio.png">
+<img src="images/Tarea2.png">
 
 ### Pseudocodigo
 
