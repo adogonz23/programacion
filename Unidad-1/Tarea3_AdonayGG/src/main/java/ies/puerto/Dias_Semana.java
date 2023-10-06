@@ -1,0 +1,49 @@
+package ies.puerto;
+
+import java.util.Scanner;
+
+//Imprimir el nombre del día de la semana correspondiente a un número ingresado por el usuario utilizando una estructura switch.
+//El día a verificar se debe de pedir por teclado.
+public class Dias_Semana {
+    public static void main (String[] args){
+
+        Scanner lector= new Scanner(System.in);
+        int n;
+        System.out.println("ingrese un numero del 1 al 7");
+        n= lector.nextInt();
+        switch (n){
+            case 1:
+                if (n ==1){
+                    System.out.println("hoy es lunes");
+                }
+            case 2:
+                if (n ==2){
+                    System.out.println("hoy es martes");
+                }
+            case 3:
+                if (n ==3){
+                    System.out.println("hoy es miercoles");
+                }
+            case 4:
+                if (n ==4){
+                    System.out.println("hoy es jueves");
+                }
+            case 5:
+                if (n ==5){
+                    System.out.println("hoy es viernes");
+                }
+            case 6:
+                if (n ==6){
+                    System.out.println("hoy es sabado");
+                }
+            case 7:
+                if (n ==7){
+                    System.out.println("hoy es domingo");
+                }
+            case 8:
+                if (n>=8){
+                    System.out.println("te dije entre 1 y 7 ...");
+                }
+        }
+    }
+}
