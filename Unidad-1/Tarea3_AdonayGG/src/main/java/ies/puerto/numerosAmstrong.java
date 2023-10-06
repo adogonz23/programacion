@@ -18,7 +18,7 @@ public class numerosAmstrong {
                 temp = temp / 10;
                 c = c + (a * a * a);
             }
-            if (temp == i)
+            if (c == i)
                 System.out.println(i);
 
 
