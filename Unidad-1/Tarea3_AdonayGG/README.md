@@ -28,7 +28,7 @@ El día a verificar se debe de pedir por teclado.
 
 ### diagrama de flujo
 
-<img src="images/Tarea2.png">
+<img src="images/diasSemana.png">
 
 ### Pseudocodigo
 
