@@ -66,7 +66,8 @@ El día a verificar se debe de pedir por teclado.
 
 ### Fibonachi 1
 
-Escribe un programa en Java que encuentre el número de Fibonacci en la posición n.  Se debe solicitar el número por teclado
+
+Escribe un programa en Java que imprima los primeros n términos de la secuencia de Fibonacci. Se debe solicitar el número n por teclado.
 
 ### diagrama de flujo
 
@@ -84,17 +85,17 @@ Escribe un programa en Java que encuentre el número de Fibonacci en la posició
  
 ### Fibonachi 2
 
-Escribe un programa en Java que imprima los primeros n términos de la secuencia de Fibonacci. Se debe solicitar el número n por teclado.
+Escribe un programa en Java que encuentre el número de Fibonacci en la posición n.  Se debe solicitar el número por teclado
 
 ### diagrama de flujo
 
-<img src="images/Tarea2.png">
+<img src="images/fibonachi1.png">
 
 ### Pseudocodigo
 - inico
 - inicializamos la variables fibo1=0, fibo2=1 ( ya que sabemos que los 2 primeros numeros fibonachis son 0 y1) "p" que es hasta la pocision que deseamos llegar y "suma=0"
 - ingresamos el valor de p 
-- inicializamos una variable (i=0) que ira aumentando +1 hasta llegar al valor de "p"-1
+- inicializamos una variable (i=1) que ira aumentando +1 hasta llegar al valor de "p"-1
 - si "i" < "p" haremos haremos suma (suma=fibo1+fibo2, fibo1=fibblo2, fibo2=suma) 
 - si i=n-1 imprime fibo1
 - fin 
