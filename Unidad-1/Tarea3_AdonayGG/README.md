@@ -106,7 +106,7 @@ Escribe un programa en Java que encuentre el máximo común divisor (MCD) de dos
 
 ### diagrama de flujo
 
-<img src="images/Tarea2.png">
+<img src="images/MCD.png">
 
 ### Pseudocodigo
 
