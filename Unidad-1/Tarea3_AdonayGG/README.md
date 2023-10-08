@@ -124,7 +124,7 @@ Escribe un programa en Java que encuentre todos los números Armstrong entre 1 y
 
 ### diagrama de flujo
 
-<img src="images/Tarea2.png">
+<img src="images/Amstrong.png">
 
 ### Pseudocodigo
 
