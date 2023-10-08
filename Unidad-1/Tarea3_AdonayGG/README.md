@@ -22,4 +22,4 @@ Encontrar y mostrar todos los números perfectos en un rango dado utilizando un 
 - Fin de programa 
  
 ### codigo
-<a href =src/main/java/ies/puerto/numerosPerfectos.java>
+<a href =src/main/java/ies/puerto/numerosPerfectos.java></a>
