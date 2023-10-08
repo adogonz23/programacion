@@ -9,7 +9,8 @@ public class Dias_Semana {
 
         Scanner lector= new Scanner(System.in);
         int n;
-        System.out.println("ingrese un numero del 1 al 7");
+        System.out.println("ingrese un numero del 1 al 7");// en este switch le dares una condicion a cada numero del 1 al 7 para que imprima el dia de la semana aignadoa cada numero.
+        
         n= lector.nextInt();
         switch (n){
             case 1:
@@ -40,10 +41,10 @@ public class Dias_Semana {
                 if (n ==7){
                     System.out.println("hoy es domingo");
                 }
-            case 8:
-                if (n>=8){
+            default:
+            
                     System.out.println("te dije entre 1 y 7 ...");
-                }
+                
         }
     }
 }

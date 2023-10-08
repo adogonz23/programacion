@@ -15,7 +15,7 @@ public class fibonachi2{
             fibo2=suma;
 
         }
-        System.out.println(fibo1);
+        System.out.println( "el numero fibonachi en a pocicion "+ p+ " es " +fibo1);// este a diferencia del ejercicio anterior nos imprimira el valor del numero fibbonachi es "n" posición.
     }
 }
 

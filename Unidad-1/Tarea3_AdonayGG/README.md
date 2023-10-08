@@ -2,11 +2,9 @@
 
 ## Ejercicios
  
-### Tarea 2
+### Numeros perfectos
 
-Un número perfecto es aquel que es igual a la suma de sus divisores propios (excluyendo él mismo). Por ejemplo, 6 es un número perfecto porque sus divisores propios son 1, 2 y 3, y 1 + 2 + 3 = 6.
-
-El ejercicio consiste en escribir un programa que encuentre e imprima todos los números perfectos en un rango dado (por ejemplo, entre 1 y 1000)
+Encontrar y mostrar todos los números perfectos en un rango dado utilizando un bucle for. Solicita el límite por teclado
 
 ### diagrama de flujo
 <img src="images/Tarea2.png">
@@ -22,3 +20,6 @@ El ejercicio consiste en escribir un programa que encuentre e imprima todos los 
 - Este proceso repetira hasta que el div sea -1 al valor minimo y hasta que el valor minimo sea igual que el valor maximo.
 - Si la suma de sus divisores es igual que el valor minimo nos imprimira el numero en pantalla.
 - Fin de programa 
+ 
+### codigo
+<a href =src/main/java/numerosPerfectos.java>
