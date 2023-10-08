@@ -145,7 +145,7 @@ Calcular la suma de todos los números pares entre 1 y un número ingresado por 
 
 ### diagrama de flujo
 
-<img src="images/Tarea2.png">
+<img src="images/sumaPares.png">
 
 ### Pseudocodigo
 
