@@ -71,7 +71,7 @@ Escribe un programa en Java que imprima los primeros n términos de la secuencia
 
 ### diagrama de flujo
 
-<img src="images/Tarea2.png">
+<img src="images/Fibonachi1.png">
 
 ### Pseudocodigo
 
@@ -89,7 +89,7 @@ Escribe un programa en Java que encuentre el número de Fibonacci en la posició
 
 ### diagrama de flujo
 
-<img src="images/fibonachi1.png">
+<img src="images/Fibonachi2.png">
 
 ### Pseudocodigo
 - inico
