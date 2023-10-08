@@ -164,7 +164,7 @@ Imprimir la tabla de multiplicar de un número ingresado por el usuario utilizan
 
 ### diagrama de flujo
 
-<img src="images/Tarea2.png">
+<img src="images/tablaMultiplicar.png">
 
 ### Pseudocodigo
 - Inicio
