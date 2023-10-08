@@ -7,7 +7,7 @@
 Encontrar y mostrar todos los números perfectos en un rango dado utilizando un bucle for. Solicita el límite por teclado
 
 ### diagrama de flujo
-<img src="images/Tarea2.png">
+<img src="images/numerosPerfectos.png">
 
 ### Pseudocodigo
 
