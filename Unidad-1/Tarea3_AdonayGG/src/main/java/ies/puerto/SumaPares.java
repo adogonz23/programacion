@@ -3,7 +3,7 @@ package ies.puerto;
 
 import java.util.Scanner;
 
-public class sumaPares {
+public class SumaPares {
 
     public static void main(String[]args){
         Scanner scanner = new Scanner(System.in);
@@ -21,7 +21,7 @@ public class sumaPares {
             
             
 
-        }while (i <= valorMax);// mientras el valor de i sea menor o igual que i hare el bucle de arriba hasta qeu se acabae la condicion e imprima el valor total.
+        }while (i <= valorMax);// mientras el valor de i sea menor o igual que i hare el bucle de arriba hasta que se acaba la condicion e imprima el valor total.
         System.out.println("la suma de numeros pares entre 1 y "+ valorMax+ " es igual a :"+suma);
     }
 }

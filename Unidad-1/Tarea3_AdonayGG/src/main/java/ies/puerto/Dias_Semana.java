@@ -16,30 +16,37 @@ public class Dias_Semana {
             case 1:
                 if (n ==1){
                     System.out.println("hoy es lunes");
+                    break;
                 }
             case 2:
                 if (n ==2){
                     System.out.println("hoy es martes");
+                    break;
                 }
             case 3:
                 if (n ==3){
                     System.out.println("hoy es miercoles");
+                    break;
                 }
             case 4:
                 if (n ==4){
                     System.out.println("hoy es jueves");
+                    break;
                 }
             case 5:
                 if (n ==5){
                     System.out.println("hoy es viernes");
+                    break;
                 }
             case 6:
                 if (n ==6){
                     System.out.println("hoy es sabado");
+                    break;
                 }
             case 7:
                 if (n ==7){
                     System.out.println("hoy es domingo");
+                    break;
                 }
             default:
             

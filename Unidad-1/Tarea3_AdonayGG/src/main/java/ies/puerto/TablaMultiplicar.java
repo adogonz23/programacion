@@ -3,7 +3,7 @@ package ies.puerto;
 import java.util.Scanner;
 
 //  Imprimir la tabla de multiplicar de un número ingresado por el usuario utilizando un bucle for. Solicita el valor de la tabla por teclado.
-public class tablaMultiplicar {
+public class TablaMultiplicar {
     public static void main (String[]args){
         Scanner scaner = new Scanner(System.in);// escaner pra introducir valores de variables.
         int valorMin, valorMax;

@@ -1,7 +1,7 @@
 package ies.puerto;
 import java.util.Scanner;
 // calcula el numero fibonachi en la pocision P
-public class fibonachi2{
+public class Fibonachi2 {
     public static void main (String[] args){
         Scanner sc = new Scanner(System.in);
         int p,fibo1=0,fibo2=1,suma=0;

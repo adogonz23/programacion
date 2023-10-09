@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Fibonachi1 {
     public static void main (String[] args){
         Scanner sc = new Scanner(System.in);
-        int p,fibo1=0,fibo2=1,suma=0; // asignaremos valor a las variables, fibo1 y 2 seran y 1 ya que sabesmos que esos son los 2 primeros numeros fibonachis 
+        int p,fibo1=0,fibo2=1,suma=0; // asignaremos valor a las variables, fibo1 y 2 seran y 1 ya que sabemos que esos son los 2 primeros numeros fibonachis
         System.out.println("introduzca la posicion de numero fibonachis que desea ver");
         p = sc.nextInt();
 

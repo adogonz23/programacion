@@ -2,7 +2,7 @@ package ies.puerto;
  //Encontrar y mostrar todos los números perfectos en un rango dado utilizando un bucle for. Solicita el límite por teclado.
 import java.util.Scanner;
 
-public class numerosPerfectos {
+public class NumerosPerfectos {
     public static void main (String[] args){
         int valorMin,valorMax,suma, div;
         Scanner scanner = new Scanner(System.in);

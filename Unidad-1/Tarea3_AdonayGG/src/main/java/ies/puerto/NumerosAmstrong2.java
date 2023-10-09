@@ -1,11 +1,11 @@
 package ies.puerto;
 // Escribe un programa en Java que encuentre todos los números Armstrong entre 1 y 1000.
-public class numerosAmstrong2 {
+public class NumerosAmstrong2 {
     public static void main (String[] args ){
 
         int c,d,u;         
         
-        for(int i = 1; i <=1000;i++){// bucle que recorrera y comprabara cada numero del 1 al 1000
+        for(int i = 1; i <=1000;i++){
             int temp = i; 
             u= temp % 10;
             d= (temp%100)/10;
