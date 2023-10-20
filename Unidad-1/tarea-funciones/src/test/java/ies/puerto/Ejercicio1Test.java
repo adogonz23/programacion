@@ -14,7 +14,7 @@ public class Ejercicio1Test {
     }
 
     @Test
-    public void calcularAreaTriangulo() {
+    public void calcularAreaTrianguloTest() {
         int base = 2;
         int altura = 3;
         int resultado = ejercicio1.areaTriangulo(base, altura);
