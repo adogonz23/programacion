@@ -1,9 +1,7 @@
 package ies.puerto;
 
-/**
- * Clase que tiene como objetivo realizar
- * @author
- */
 public class Ejercicio2 {
- }
-
+    public static void main(String[] args) {
+        System.out.println("Hola Mundo al ejercicio X");
+    }
+}

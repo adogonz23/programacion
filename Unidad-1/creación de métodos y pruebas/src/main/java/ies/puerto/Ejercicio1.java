@@ -1,25 +1,14 @@
 package ies.puerto;
-
 /**
- * Clase que tiene como objetivo realizar el calculo factorial
- * @author
+ * Realizar un programa que calcule el sueldo de un trabajador, el programa debe de tener un método que reciba el numero de horas que has trabajado en un mes, las horas se pagan a 10€.
+ * @author adogonz23
  */
+
 public class Ejercicio1 {
-    public static void main(String[] args) {
-
+    
+    public static int calcularSueldo(int horasTrabajadas){
+        
+    }
     }
 
-    /**
-     * funcion que calcula el factorial de un numero
-     * @param numero de entrada para el calculo
-     * @return resultado de la operacion factorila
-     */
-    public static int calcularFactorial(int numero) {
-        int resultado=1;
-        for (int i=2; i<=numero; i++){
-            resultado=resultado*i;
-        }
-        return resultado;
-    }
 
-}
