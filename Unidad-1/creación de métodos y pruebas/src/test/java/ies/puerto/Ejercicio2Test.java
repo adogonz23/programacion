@@ -10,6 +10,6 @@ public class Ejercicio2Test {
         Ejercicio2 ejercicio2 =new Ejercicio2();
         String resultado = Ejercicio2.analizarNumero(20);
         Assertions.assertEquals("" , resultado);
-
+        //(frustracion, me estanque no sabia que hacer y lo deje)
     }
 }
