@@ -14,7 +14,7 @@ public class Ejercicio1 {
      * @return
      */
     public static int calcularSueldo(int horasTrabajadas) {
-        int sueldoPorHora = 10; // € por hora
+        int sueldoPorHora = 10;
         int sueldo = horasTrabajadas * sueldoPorHora;
         return sueldo;
         }

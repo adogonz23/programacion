@@ -14,7 +14,7 @@ public class Ejercicio2 {
         numero = scaner.nextInt();
 
         analizarNumero(numero);
-    } //(mensaje para el profe) No se si se pueden concatenar metodos, si es es asi hubiera hecho dos metos uno para par e impar y otro para positivo negativo
+    }
 
     /**
      * metodo qeu primero nos dice sies positivo o negativo y luego si es par o impar

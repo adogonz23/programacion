@@ -11,6 +11,6 @@ public class Ejercicio1Test {
         Ejercicio1 ejercicio1 = new Ejercicio1();
         int resultado = Ejercicio1.calcularSueldo(10);
 
-        Assertions.assertEquals((100),resultado);
+        Assertions.assertEquals(100,resultado);
    }
 }
