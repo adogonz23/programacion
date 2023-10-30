@@ -1,25 +1,22 @@
 package ies.puerto;
 
 /**
- * Clase que tiene como objetivo realizar el calculo factorial
- * @author
+ *Escribe un programa que calcule la suma de todos los elementos en un array de enteros.
+ * @author adogonz23
  */
 public class Ejercicio1 {
-    public static void main(String[] args) {
-
-    }
 
     /**
-     * funcion que calcula el factorial de un numero
-     * @param numero de entrada para el calculo
-     * @return resultado de la operacion factorila
+     * metodo para culcular la suma de valores de un array
+     * @return devuelve el valor de la suma de todos los numeros dentro del arrays
      */
-    public static int calcularFactorial(int numero) {
-        int resultado=1;
-        for (int i=2; i<=numero; i++){
-            resultado=resultado*i;
+    public int sumaArray(){
+        int[] array = {1,2,3,4,5}
+        int suma = 0
+            for(int i=0; i<array.length; i++){
+                suma+= array[i]
         }
-        return resultado;
+            return =suma
     }
 
 }
