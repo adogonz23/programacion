@@ -6,9 +6,7 @@ package ies.puerto;
  */
 
 public class Ejercicio2 {
-     public static public static void main(String[] args) {
-
-     }
+ 
 
     /**
      * metedo para calcular el promedio de un array
@@ -17,7 +15,7 @@ public class Ejercicio2 {
      public float promedioArray(){
          float[] array={10f,20f,25f,12f};
          float promedio;
-         int suma=0
+         int suma=0;
                  for(int i=0; i <array.length;i++){
                      suma+=array[i];
                  }

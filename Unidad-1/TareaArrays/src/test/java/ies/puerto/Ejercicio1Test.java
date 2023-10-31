@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class Ejercicio1Test {
     Ejercicio1 ejercicio1 = new Ejercicio1();
 
-    @Test
+    
 
     }
-}
+

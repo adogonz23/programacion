@@ -4,26 +4,30 @@ package ies.puerto;
  * @author adogonz23
  */
 public class Ejercicio3 {
-    int[] array = {5,9,14,8};
-    public static void main(String[] args){
-        System.out.println(valorMaximo);
+    
 
+ /**
+  * metodo que nos permite hayar el valor maximo dentro de un array
+  * @return una vez comparado todos los valores del arrray devuelve el mayor
+  */   
+    public int valorMaximo(){
+        int[] array= {10,15,6,8};
+        int max = array[0];
+        for(int i = 1; i < array.length;i++){
+            if (array[i]>max) {
+                max = array[i];
+            }
+        }
+        return max;
     }
-    public int valorMaximo(array[0],array[1]){
-        if (array[0]>array[1]){
-            return array[0]
-        }else return array[1]
-    }
-    public int valorMaximo(array[0],array[1],array[2]){
-       int resultado= valorMAximo(array[0],array[1])
-               if (array[2]>resultado ){
-                   return array[2]
-               } else return resultado
-    }
-    public int valorMaximo(array[0],array[1],array[2],array[3]){
-        int resultado= valorMAximo(array[0],array[1],array[2])
-        if (array[3]>resultado ){
-            return array[3]
-        } else return resultado
-    }
+     public int valorMinimo(){
+        int[] array= {10,15,6,8};
+        int min = array[0];
+        for(int i = 1; i < array.length;i++){
+            if (array[i]<min) {
+                min = array[i];
+            }
+        }
+        return min;
+    }  
 }

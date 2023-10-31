@@ -10,13 +10,12 @@ public class Ejercicio1 {
      * metodo para culcular la suma de valores de un array
      * @return devuelve el valor de la suma de todos los numeros dentro del arrays
      */
-    public int sumaArray(){
-        int[] array = {1,2,3,4,5}
-        int suma = 0
+    public static int sumaArray(int[]array, int suma){
+        
             for(int i=0; i<array.length; i++){
-                suma+= array[i]
+                suma+= array[i];
         }
-            return =suma
+            return suma;
     }
 
 }
