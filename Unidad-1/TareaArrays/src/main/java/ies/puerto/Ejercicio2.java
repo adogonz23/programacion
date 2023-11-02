@@ -12,8 +12,7 @@ public class Ejercicio2 {
      * metedo para calcular el promedio de un array
      * @return devuelve el valor de la suma total de los valores dentro del array divido por su tamaño
      */
-     public float promedioArray(){
-         float[] array={10f,20f,25f,12f};
+     public float promedioArray(float[]array){
          float promedio;
          int suma=0;
                  for(int i=0; i <array.length;i++){
