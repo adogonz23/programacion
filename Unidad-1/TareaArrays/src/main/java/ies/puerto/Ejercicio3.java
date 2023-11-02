@@ -6,7 +6,7 @@ package ies.puerto;
 public class Ejercicio3 {
     
 
- /**
+/**
   * metodo que nos permite hayar el valor maximo dentro de un array
   * @return una vez comparado todos los valores del arrray devuelve el mayor
   */   
@@ -19,7 +19,7 @@ public class Ejercicio3 {
         }
         return max;
     }
-     public int valorMinimo(int []array){
+    public int valorMinimo(int []array){
         int min = array[0];
         for(int i = 1; i < array.length;i++){
             if (array[i]<min) {

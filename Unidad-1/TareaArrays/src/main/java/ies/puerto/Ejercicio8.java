@@ -1,7 +1,14 @@
 package ies.puerto;
-
+/** eliminar elementos dublicados en arrya
+ * @author adogonz23
+*/
 public class Ejercicio8 {
-    public static void main(String[] args) {
-        System.out.println("Hola Mundo al ejercicio X");
+    
+    
+    public void DetectarIguales(int[]array){
+        for(int i=0; i<array.length;i++){
+            
+        }
     }
+
 }

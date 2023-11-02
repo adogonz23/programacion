@@ -1,7 +1,13 @@
 package ies.puerto;
 
 public class Ejercicio10 {
-    public static void main(String[] args) {
-        System.out.println("Hola Mundo al ejercicio X");
+    
+
+    public boolean esDiagonal(int[][]array){
+        if(array.length!= array[0].length){
+            return false;
+        }
+        for(int i=0;)
     }
+    
 }

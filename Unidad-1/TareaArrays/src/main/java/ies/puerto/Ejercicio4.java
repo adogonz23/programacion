@@ -4,9 +4,7 @@ package ies.puerto;
  * @author adgonz23
  */
 public class Ejercicio4 {
-    public static void main(String[] args) {
-        System.out.println("Hola Mundo al ejercicio X");
-    }
+
     public  static void numerosPares(int[] arrayPares){
 
         int numeroPar;
@@ -14,7 +12,7 @@ public class Ejercicio4 {
             if (arrayPares[i]% 2 == 0) {
                 numeroPar= arrayPares[i];
             System.out.println(numeroPar);
- 
+
             }
         }
     }
