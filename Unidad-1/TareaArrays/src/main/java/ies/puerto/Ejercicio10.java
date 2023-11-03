@@ -7,7 +7,10 @@ public class Ejercicio10 {
         if(array.length!= array[0].length){
             return false;
         }
-        for(int i=0;)
+        for(int i=0;i< array.length;i++){
+
+        }
+        return true;
     }
     
 }
