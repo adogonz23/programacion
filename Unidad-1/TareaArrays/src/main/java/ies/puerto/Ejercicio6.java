@@ -14,7 +14,7 @@ public class Ejercicio6 {
 /**
  * 
  * @param matriz la cual queremos hayar su tranpuesta 
- * @return el valor de la filas en las columnas y el de las comlunas en las filas 
+ * @return el valor de la filas en las columnas y el de las comlunas en las filas en una nueva matriz
  */
     public static int[][] hallarTranspuesta(int[][] matriz){
         int [][] matrizTranspuesta= new int[matriz[0].length][matriz.length];
@@ -33,7 +33,7 @@ public class Ejercicio6 {
             for(int j=0; j< matriz[i].length;j++){
                 System.out.println(matriz [i][j]);
             }
-           System.out.println();
+        System.out.println();
         }
     }
     }
