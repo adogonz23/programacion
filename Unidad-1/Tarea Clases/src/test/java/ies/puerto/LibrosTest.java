@@ -25,4 +25,12 @@ public class LibrosTest {
         assertEquals(resultado, resultaOK);
 
     }
+    @Test 
+    public void cambiarTituloOk(){
+        libro1.setTitulo("HAH");
+        String resultado= "Titulo: HAH Autor: Albahadmamad Año de publicación :2222";
+        String resultaOK= libro1.imprimir();
+        assertEquals(resultado, resultaOK);
+
+    }
 }
