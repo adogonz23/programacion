@@ -32,7 +32,7 @@ public class Rectangulo {
         
     }
     public float hallarPerimetro(){
-        float perimetro  = lado1+ lado2+ lado3;
+        float perimetro  =(largo*2)+(ancho*2);
         return perimetro;
     }
     

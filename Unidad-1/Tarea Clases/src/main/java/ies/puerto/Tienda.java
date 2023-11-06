@@ -21,9 +21,18 @@ public class Tienda {
         this.inventario= new ArrayList<>();
 
     }
+    /**
+     * metodo qeu agrega el producto a nuestro array list inventario
+     * @param producto 
+     */
     public void agregarProducto(Producto producto){
         inventario.add(producto);
     }
+    /**
+     * 
+     * @param nombre de producto    
+     * @param cantidad cantidad de producto que se desea
+     */
     public void venderProductos(String nombre, int cantidad){
         int nuevoStock=0;
         for(Producto producto:inventario){
@@ -32,8 +41,8 @@ public class Tienda {
                     nuevoStock= producto.getStock()-cantidad;
                     producto.setStock(nuevoStock);
                             
-                }
-                System.out.println("producto no encontrado");
+                }else{
+                System.out.println("producto no encontrado");}
             }
         }
         

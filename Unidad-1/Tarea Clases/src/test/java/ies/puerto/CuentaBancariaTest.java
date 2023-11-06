@@ -8,17 +8,19 @@ public class CuentaBancariaTest {
     CuentaBancaria cliente1 = new CuentaBancaria("Adonay Gonzalez", 1500.0);
     @Test
     public void ingresosTest(){
-    //double ingreso =500.0;
-    //double resultado = 2000.0;
-    //double resultadoOK= cliente1.realizarIngreso1(ingreso);
-    //assertEquals(resultado, resultadoOK);
+    double ingreso =500.0;
+    cliente1.realizarIngreso(ingreso);
+    double resultado = 2000.0;
+    double resultadoOK= cliente1.getSaldo();
+    assertEquals(resultado, resultadoOK);
     }
     @Test
     public void realizarRetiroOK(){
-        //double retiro=1000.0;
-        //double resultado= 500.0;
-        //double resultadoOK= cliente1.realizarRetiro1(retiro);
-        //assertEquals(resultado, resultadoOK);
+        double retiro=1000.0;
+        cliente1.realizarRetiro(retiro);
+        double resultado= 500.0;
+        double resultadoOK= cliente1.getSaldo();
+        assertEquals(resultado, resultadoOK);
     }
     @Test
     public void todoOK(){

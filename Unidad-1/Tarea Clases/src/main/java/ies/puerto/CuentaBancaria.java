@@ -44,22 +44,19 @@ public class CuentaBancaria {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
+    /**
+     *  metodo que nos devuelve el saldo depues de añadir un deposito
+     * @param deposito cantidad a añadir
+     */
     public void realizarIngreso(double deposito){
         double suma=0.0;
         suma=deposito+getSaldo();
         this.saldo= suma;
     }
-    public double realizarIngreso1(double deposito){
-        double suma=0.0;
-        suma=deposito+getSaldo();
-        return suma;
-    }
-    public void setIngreso(double ingreso){
-        this.saldo=realizarIngreso1(ingreso);
-    }
+    
     /**
-     * 
-     * @param retiro 
+     *  metodo que nos permite hacer un retiro y setear el nuevo saldo
+     * @param retiro cantidad de dinero a retiar
      * 
      */
     public void realizarRetiro(double retiro){

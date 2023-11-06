@@ -44,10 +44,10 @@ public class Estudiante{
         this.carrera = carrera;
     }
     public double getPromedio() {
-        return promedioNotas(notas);
+        return promedio;
     }
-    public void setPromedio(double promedioNotas) {
-        this.promedio = promedioNotas(notas);
+    public void setPromedio(double promedio) {
+        this.promedio = promedio;
     }
     public int[] getNotas() {
         return notas;
@@ -57,7 +57,7 @@ public class Estudiante{
     }
     
     public String printInfo(){
-        return "El alumno "+nombre+" con edad "+edad+ "años, cursando la carrera de "+carrera+ ", con una media de "+promedioNotas(notas)+" esta "+resultadoCurso();
+        return "El alumno "+nombre+" con edad "+edad+ "años, cursando la carrera de "+carrera+ ", con una media de "+promedio+" esta "+resultadoCurso();
     }
     public String resultadoCurso(){
         if (promedio >= 5.0) {
@@ -67,7 +67,7 @@ public class Estudiante{
         }
         
     }
-    public double promedioNotas(int[] notas){
+    public void promedioNotas(int[] notas){
         int suma=0;
         double media=0;
         
@@ -75,7 +75,7 @@ public class Estudiante{
                 suma= suma+notas[i];
                 media= suma /(notas.length);
     }   
-    return media;
+    this.promedio= media;
     }
 
 }
