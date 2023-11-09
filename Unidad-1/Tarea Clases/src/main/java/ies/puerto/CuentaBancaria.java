@@ -65,6 +65,7 @@ public class CuentaBancaria {
             resta= getSaldo()-retiro;
             this.saldo=resta;    
         }
+        
     }
     public String printInfo(){
         return "el cliente "+nombreTitular+" tiene un saldo de = "+saldo;

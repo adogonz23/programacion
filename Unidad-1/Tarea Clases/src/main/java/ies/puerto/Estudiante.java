@@ -59,6 +59,10 @@ public class Estudiante{
     public String printInfo(){
         return "El alumno "+nombre+" con edad "+edad+ "años, cursando la carrera de "+carrera+ ", con una media de "+promedio+" esta "+resultadoCurso();
     }
+    /**
+     * 
+     * @return metodo que nos dice si aprueba o repite
+     */
     public String resultadoCurso(){
         if (promedio >= 5.0) {
             return "aprovado";
@@ -67,6 +71,10 @@ public class Estudiante{
         }
         
     }
+    /**
+     * metodo que nos setea el resultado medio de las notas
+     * @param notas array con las notas del alumno
+     */
     public void promedioNotas(int[] notas){
         int suma=0;
         double media=0;

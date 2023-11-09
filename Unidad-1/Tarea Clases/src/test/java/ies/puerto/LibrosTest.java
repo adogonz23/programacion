@@ -19,7 +19,7 @@ public class LibrosTest {
     }
     @Test 
     public void cambiarAutorOk(){
-        libro1.cambiarAutor("Adonay Gonzalez");
+        libro1.setAutor("Adonay Gonzalez");
         String resultado= "Titulo: Pedro Picapiedra Autor: Adonay Gonzalez Año de publicación :2222";
         String resultaOK= libro1.imprimir();
         assertEquals(resultado, resultaOK);

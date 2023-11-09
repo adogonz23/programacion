@@ -2,6 +2,8 @@ package ies.puerto;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 public class TiendaTest {
@@ -31,7 +33,7 @@ public class TiendaTest {
         casaConchaTienda.agregarProducto(producto2);
         casaConchaTienda.venderProductos("papakineua", 5);
         casaConchaTienda.venderProductos("aguacate", 2);
-        String resultado= "Nombre: agucate, precio: 14.5, stock: 248 Nombre: papakineua, precio: 5.5, stock: 98";
+        String resultado= "Nombre: agucate, precio: 14.5, Stock: 248 Nombre: papakineua, precio: 5.5, stock: 98";
         String resultadoOk = casaConchaTienda.mostrarInventario();
         assertEquals(resultado, resultadoOk);
     }

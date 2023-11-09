@@ -1,5 +1,7 @@
 package ies.puerto;
-
+/***
+ * @author adogonz23
+ */
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,14 +17,14 @@ public class Tienda {
         this.inventario = inventario;
     }
     /**
-     * constructor basico
+     * constructor basico tienda
      */
     public Tienda(){
         this.inventario= new ArrayList<>();
 
     }
     /**
-     * metodo qeu agrega el producto a nuestro array list inventario
+     * metodo que agrega el producto a nuestro array list inventario
      * @param producto 
      */
     public void agregarProducto(Producto producto){
