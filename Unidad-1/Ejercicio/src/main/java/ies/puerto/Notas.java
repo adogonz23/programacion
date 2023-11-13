@@ -41,7 +41,7 @@ public class Notas {
             return "suspenso";
         }else{
             if ((promedio>=5)&&(promedio<=6.99)) {
-                return "aprovado";
+                return "aprobado";
             }else{
                 if ((promedio>=7)&&(promedio<=8.99)) {
                     return "bien";
