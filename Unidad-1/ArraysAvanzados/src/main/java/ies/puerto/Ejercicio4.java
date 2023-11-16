@@ -5,7 +5,10 @@ package ies.puerto;
  * @author adogonz23
  */
 public class Ejercicio4 {
-    
+    /**
+     *  
+     * @param matriz de entrada con los valores 
+     */
     public void sumaMatriz(int[][]matriz){
         int suma=0;
         for(int i=0;i<matriz.length;i++){

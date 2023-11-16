@@ -8,20 +8,20 @@ import java.util.Scanner;
 public class Ejercicio2 {
     Scanner scaner =new Scanner(System.in);
 /**
- *  metodo qeu introduce valores dentro de un array y en caso de que sea negativo corta el proceso 
+ *  metodo que introduce valores dentro de un array y en caso de que sea negativo corta el proceso 
  * @return un array con valores introducidos por partalla
  */
     public int[] introducirValores(int[] array){
-        
+        int i=0;
         int temporal;
-        for(int i=0;i<array.length;i++){
-            System.out.println("ingrese un valor");
+        do{
+            System.out.println("ingrese valor");
             temporal=scaner.nextInt();
-            if(temporal<0){
-                break;
-            }
-            array[i]=temporal;
-        }
+            if(temporal>0){
+                i++;
+            }else{return array;}
+        }while(i<array.length);
+        
         return array;
     }
     /**

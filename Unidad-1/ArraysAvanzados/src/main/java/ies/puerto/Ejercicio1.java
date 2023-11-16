@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Ejercicio1 {
     Scanner scaner = new Scanner(System.in);
 /**
- * 
+ * Metodo que pide datos y los introduce en un array
  * @return un array con las 5 notas introducidas
  */
     public int[] introducirValores(int[]arrayNotas){
@@ -35,8 +35,8 @@ public class Ejercicio1 {
      * @param arrayNotas notas del alumno   
      * @return devuelve la nota media
      */
-    public int media(int[]arrayNotas){
-        int promedio=0;
+    public float media(int[]arrayNotas){
+        float promedio=0;
         int suma=0;
         for (int i=0;i<arrayNotas.length;i++){
             suma=suma+arrayNotas[i];
@@ -50,7 +50,7 @@ public class Ejercicio1 {
      * @return la nota mas alta
      */
     public int hallarMaxima(int[]arrayNotas){
-        int notaMaxima=arrayNotas[4];
+        int notaMaxima=arrayNotas[arrayNotas.length-1];
         for(int i=0;i<arrayNotas.length;i++){
             for(int j=0;j<arrayNotas.length;j++){
                 if (arrayNotas[j]>arrayNotas[j+1]) {

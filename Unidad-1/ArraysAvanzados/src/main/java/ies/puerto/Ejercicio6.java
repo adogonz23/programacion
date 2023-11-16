@@ -1,5 +1,7 @@
 package ies.puerto;
-
+/**
+ * @author adogonz23
+ */
 public class Ejercicio6 {
 
     public int[][] dibujarMarco (int[][]marco){
@@ -9,8 +11,6 @@ public class Ejercicio6 {
                     marco[i][j]=1;
                 }else if (i==marco.length-1||j==marco[i].length-1) {
                     marco[i][j]=1;
-                }else{
-                    marco[i][j]=0;
                 }
                     
                 }

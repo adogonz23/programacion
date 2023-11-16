@@ -8,8 +8,6 @@ public class Ejercicio5 {
             for(int j =0;j<diagonal[i].length;j++){
                 if (i==j){
                     diagonal[i][j]=1;
-                }else{
-                    diagonal[i][i]=0;
                 }
             }
         }
