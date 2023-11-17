@@ -69,8 +69,8 @@ public class Ejercicio1 {
      */
     public int hallarMinima(int[]arrayNotas){
         int notaminima=arrayNotas[0];
-        for(int i=0;i<arrayNotas.length;i++){
-            for(int j=0;j<arrayNotas.length;j++){
+        for(int i=0;i<arrayNotas.length-1;i++){
+            for(int j=0;j<arrayNotas.length-1-i;j++){
                 if (arrayNotas[j]>arrayNotas[j+1]) {
                     int temporal= arrayNotas[j];
                     arrayNotas[j]=arrayNotas[j+1];
@@ -79,5 +79,45 @@ public class Ejercicio1 {
             }
         }
         return notaminima;
+    }
+    public int[] ordenarArray(int[]array){
+        for(int i=0;i<array.length-1;i++){
+            for(int j=0;j<array.length-1-i;j++){
+                if (array[j]>array[j+1]) {
+                    int temporal= array[j];
+                    array[j]=array[j+1];
+                    array[j+1]=temporal;
+                }
+            }
+        }
+        return array;
+    }
+    public int[] arrayInverso(int[]array){
+        int[] invertido= new int[array.length];
+        for (int i=0;i<array.length;i++){
+            invertido[i]= array[array.length-1-i];
+        }
+        return invertido;
+    }
+    public void rellenaArray(int[]array){
+        int i=0;
+        int temporal=0;
+        boolean salir=false;
+        do{
+            System.out.println("introduzca un valor");
+            temporal=scaner.nextInt();
+            if (temporal< 0) {
+                salir= true;
+            }else{
+                array[i]=temporal;
+                i++;
+            }
+        }while (i<array.length && !salir);
+        printArray(array, i);
+    }
+    public void printArray(int[]array, int elemtosImprimir){
+        for (int i=0;i <= elemtosImprimir;i++){
+            System.out.println(array[i]+" ");
+        }
     }
 }

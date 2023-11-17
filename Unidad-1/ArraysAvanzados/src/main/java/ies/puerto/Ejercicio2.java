@@ -11,25 +11,27 @@ public class Ejercicio2 {
  *  metodo que introduce valores dentro de un array y en caso de que sea negativo corta el proceso 
  * @return un array con valores introducidos por partalla
  */
-    public int[] introducirValores(int[] array){
+    public void introducirValores(int[] array){
         int i=0;
         int temporal;
+        boolean salir = false;
         do{
             System.out.println("ingrese valor");
             temporal=scaner.nextInt();
             if(temporal>0){
+                array[i]=temporal;
                 i++;
-            }else{return array;}
-        }while(i<array.length);
+            }else{salir=true;}
+        }while(i<array.length && !salir);
+        imprimirArrays(array, i);
         
-        return array;
     }
     /**
      * metodo que imprime los valores dentro del array omitiendo los ceros(se qeu no es la solucion correcta pero no se como eliminar los elementos de un array y acortar su tamaño)
      * @param array con lo valores introducidos
      */
-    public void imprimirArrays(int[]array){
-        for(int i=0;i<array.length && array[i]!=0;i++){
+    public void imprimirArrays(int[]array, int valorestotal){
+        for(int i=0;i<valorestotal;i++){
             System.out.println(array[i]);
         }
     }
