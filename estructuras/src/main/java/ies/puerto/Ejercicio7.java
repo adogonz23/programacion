@@ -1,5 +1,5 @@
 package ies.puerto;
-/**
+/** Escribe un programa que imprima todos los números impares del 1 al 20, usando continue para omitir los números pares.
  * @author adogonz23
  */
 public class Ejercicio7 {

@@ -10,7 +10,7 @@ public class Ejercicio1 {
         int valor=0;
         for (int i =1;i<=100;i++){
             
-            if (i/5==0 && i/7 ==0) {
+            if ((i%5==0) && (i%7 ==0)) {
                 valor=i;
                 break;
             }

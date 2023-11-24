@@ -1,5 +1,5 @@
 package ies.puerto;
-/**
+/** 
  * @author adogonz
  */
 public class Ejercicio9 {
@@ -10,6 +10,12 @@ public class Ejercicio9 {
                 continue;
             }
             System.out.println(num);
+        }
+        for(int num : arrray){
+            if (num>50) {
+                System.out.println(num);   
+            }
+        
         }
     }
 }
