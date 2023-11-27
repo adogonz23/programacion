@@ -14,6 +14,9 @@ public class Ejercicio4 {
             int operacion= scaner.nextInt();
         } catch (InputMismatchException inputMismatchException) {
             throw new Exception("El tipo de entrada no se corresponde con el tipo de dato esperado, imposible realizar una operacion matematica en un scaner");
+        }finally{
+            scaner.close();
+            
         }
         
     }

@@ -13,7 +13,5 @@ public static void main(String[] args) throws Exception {
     } catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
         throw new Exception("La posicion introducida: "+4+", se sale del rango del array");
     }
-    
-
-}
+    }
 }
