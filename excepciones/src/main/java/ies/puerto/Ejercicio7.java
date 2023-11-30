@@ -6,18 +6,18 @@ import java.util.Scanner;
 public class Ejercicio7 {
     public static void main(String[] args) {
         Scanner scaner = new Scanner(System.in);
-        int dividendo=0;
-        int divisor=0;
+        float dividendo=0;
+        float divisor=0;
         try {
             System.out.println("Introduce el dividendo");
-            dividendo= scaner.nextInt();
+            dividendo= scaner.nextFloat();
             System.out.println("Introduce el divisor");
-            divisor=scaner.nextInt();
+            divisor=scaner.nextFloat();
         } catch (InputMismatchException inputMismatchException) {
-            System.out.println("Error al introducir el tipo de dato");
+            System.out.println("Error de tipo de dato");
         }
-        int division=dividendo/divisor;
-        System.out.println(division);
-    }
+        float division=dividendo/divisor;
+        System.out.println("El resultado es ="+division);
     
+}
 }
