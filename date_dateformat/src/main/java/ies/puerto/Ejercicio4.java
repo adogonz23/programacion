@@ -8,7 +8,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Ejercicio4 {
-   
+
     public static void main(String[] args) {
 
     Calendar calendario = Calendar.getInstance();

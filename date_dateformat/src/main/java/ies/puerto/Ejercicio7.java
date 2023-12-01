@@ -16,15 +16,15 @@ public class Ejercicio7 {
 
     public static int diferenciaFechas(Date fecha1, Date fecha2){
         
-        int diferencia =0;
+        int diferencia = 0;
         if (fecha1.equals(fecha2)) {
             return diferencia;
         }else if (fecha1.after(fecha2)) {
             diferencia= (int) (fecha1.getTime()-fecha2.getTime()) /86400000;
             
-        }
+        }else{
         diferencia= (int) (fecha2.getTime()-fecha1.getTime())/86400000;
-
+        }
         return diferencia;
 
     }

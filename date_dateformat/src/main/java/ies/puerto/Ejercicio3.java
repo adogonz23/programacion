@@ -12,6 +12,7 @@ public class Ejercicio3 {
         int mins=calendario.get(Calendar.MINUTE);
         int seg=calendario.get(Calendar.SECOND);
         System.out.println(año+" "+mes+" "+dia+" "+hora+" "+mins+" "+seg);
+        System.out.println(calendario.getTime());
     }
     
 }

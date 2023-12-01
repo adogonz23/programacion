@@ -7,7 +7,7 @@ public class Ejercicio9 {
         Calendar calendario= Calendar.getInstance();
         int mes = calendario.get(Calendar.MONTH)+1;
         int anio = calendario.get(Calendar.YEAR);
-        calendario.set(anio,mes -1,1);
+        calendario.set(anio,mes-1,1);
         System.out.println(calendario.getTime());
     }
 }

@@ -11,7 +11,12 @@ public class Ejercicio8 {
 
         String fechaSinFormato = "03-12-1995";
         SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
-        //Date fechaFormato = formato.parse(fechaSinFormato);
+        try {
+            Date fechaFormato = formato.parse(fechaSinFormato);
+        } catch (Exception e) {
+            // 
+        }
+        
         System.out.println(fechaSinFormato);
     }
 }
