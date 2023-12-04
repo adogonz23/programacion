@@ -5,15 +5,19 @@ package ies.puerto;
 public class Ejercicio5 {   
     public static void main(String[] args) {
         String frase="mi moto alpine derrapante";
-        reamplazar('i', frase);
-        System.out.println(frase);
+        
+        System.out.println(reamplazar('i', frase, 'e'));
     }
-    public static void reamplazar(char caracterBuscado,String frase){
+    public static String reamplazar(char caracterBuscado,String frase, char remplazo){
+        String nuevaFrase="";
         for(int i=0;i<frase.length();i++){
             char caracter=frase.charAt(i);
             if (caracter==caracterBuscado) {
-                ;
-            }
+                nuevaFrase=nuevaFrase + remplazo;
+            }else{
+            nuevaFrase=nuevaFrase + frase.charAt(i);
         }
+        }
+        return nuevaFrase;
     }
 }
