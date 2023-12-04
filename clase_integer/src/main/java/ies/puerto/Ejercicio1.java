@@ -25,7 +25,7 @@ public class Ejercicio1 {
                 System.out.println("es impar");
             }
         } catch (InputMismatchException inputMismatchException) {
-            System.out.println("El tipom de dato no es el correcto");
+            System.out.println("El tipo de dato no es el correcto");
         }
         
     }
