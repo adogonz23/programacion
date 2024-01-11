@@ -11,7 +11,11 @@ public class Ejercicio5 {
         char [][] piramide= dibujarPiramide(tamaño);
         for(int i=0;i<piramide.length;i++){
             for(int j=i;j<piramide[i].length;j++){
+                if (piramide[i][j]==0) {
+                    System.out.print(" ");
+                }else{
                 System.out.print(piramide[i][j]);
+                }
             }
             System.out.println();
         }
