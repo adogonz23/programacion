@@ -1,4 +1,6 @@
-package ies.puerto;
+package ies.puerto.impl;
+
+import ies.puerto.interfaz.IReproductor;
 
 public class ReproductorMP3 implements IReproductor {
     private String estadoCancion;

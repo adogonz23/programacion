@@ -1,4 +1,6 @@
-package ies.puerto;
+package ies.puerto.impl;
+
+import ies.puerto.interfaz.IFormaGeomatrica;
 
 public class Ciruclo implements IFormaGeomatrica{
     private float radio;

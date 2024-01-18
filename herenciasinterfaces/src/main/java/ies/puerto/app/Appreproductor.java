@@ -1,4 +1,6 @@
-package ies.puerto;
+package ies.puerto.app;
+
+import ies.puerto.impl.ReproductorMP3;
 
 public class Appreproductor {
     static ReproductorMP3 reproductorMP3;
