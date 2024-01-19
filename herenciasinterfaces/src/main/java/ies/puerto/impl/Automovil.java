@@ -4,33 +4,20 @@ import ies.puerto.interfaz.IConductor;
 
 public class Automovil implements IConductor {
 
-    private Boolean estado;
+    @Override
+    public String arrancar() {
+        return "Arrancado el coche,Señores!";
+    }
 
+    @Override
+    public String detener() {
+        return "Apagando motores, Señores!";
+    }
+    public String conducir(){
+        return "Estamos cunduciendo señores";
+    }
     
 
-    public Automovil(Boolean estado) {
-        this.estado = estado;
-    }
-
-    public Boolean getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Boolean estado) {
-        this.estado = estado;
-    }
-
-    @Override
-    public void arrancar() {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void detener() {
-        // TODO Auto-generated method stub
-        
-    }
     
     
 }
