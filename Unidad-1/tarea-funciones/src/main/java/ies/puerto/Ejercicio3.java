@@ -26,7 +26,7 @@ public class Ejercicio3 {
      * @return
      */
     public int areaRectangulo(int ladoMenor, int ladoMayor) {
-        int resultado = a*b;
+        int resultado = ladoMayor*ladoMenor;
 
         return resultado;
     }
