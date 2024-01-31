@@ -8,8 +8,8 @@ import ies.puerto.abstractas.Vehiculo;
 
 
 public class Concesionario {
-    private HashSet<Coche>coches;
-    private ArrayList<Motocicleta>motocicletas;
+    private HashSet<Coche>coches =new HashSet<>();
+    private ArrayList<Motocicleta>motocicletas= new ArrayList<>();
 
 
     
@@ -37,14 +37,14 @@ public class Concesionario {
     public void setMotocicletas(ArrayList<Motocicleta> motocicletas) {
         this.motocicletas = motocicletas;
     }
-    boolean addMotocicleta (Motocicleta motocicleta){
+    public boolean addMotocicleta (Motocicleta motocicleta){
         if (motocicletas.contains(motocicleta)) {
             return false;
         }
         motocicletas.add(motocicleta);
         return true;
     }
-    boolean removeMotocicleta (Motocicleta motocicleta){
+    public boolean removeMotocicleta (Motocicleta motocicleta){
         if (motocicletas.contains(motocicleta)) {
             motocicletas.remove(motocicleta);
             return true;
@@ -52,14 +52,14 @@ public class Concesionario {
         
         return false;
     }
-    boolean addCoche (Coche coche){
+    public boolean addCoche (Coche coche){
         if (coches.contains(coche)) {
             return false;
         }
         coches.add(coche);
         return true;
     }
-    boolean removeCoche (Coche coche){
+    public boolean removeCoche (Coche coche){
         if (coches.contains(coche)) {
             coches.remove(coche);
             return true;
@@ -67,7 +67,23 @@ public class Concesionario {
         
         return false;
     }
-    float velocidadMediaCoches(){
+    public Motocicleta obtenerMotocicleta(String matricula) {
+        for (Motocicleta moto : motocicletas) {
+            if (moto.getMatricula().equals(matricula)) {
+                return moto;
+            }
+        }
+        return null;
+        }
+        public Coche obtenerCoche(String matricula) {
+            for (Coche coche : coches) {
+                if (coche.getMatricula().equals(matricula)) {
+                    return coche;
+                }
+            }
+            return null;
+        }
+    public float velocidadMediaCoches(){
         float resultado= 0;
         if (coches.isEmpty()) {
             return resultado;
@@ -78,7 +94,7 @@ public class Concesionario {
         resultado=resultado/coches.size();
         return resultado;
     }
-    float velocidadMediaMotos(){
+    public float velocidadMediaMotos(){
         float resultado= 0;
         if (motocicletas.isEmpty()) {
             return resultado;
@@ -89,7 +105,7 @@ public class Concesionario {
         resultado=resultado/motocicletas.size();
         return resultado;
     }
-    float mediaVehiculos(){
+    public float mediaVehiculos(){
         float resultado=0;
         ArrayList<Vehiculo> vehiculos = new ArrayList<>();
         vehiculos.addAll(motocicletas);
