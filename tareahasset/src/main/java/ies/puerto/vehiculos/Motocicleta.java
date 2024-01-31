@@ -14,4 +14,5 @@ public class Motocicleta extends Vehiculo{
     public String toString(){
         return "La moto: "+getMarca()+", modelo: "+getModelo()+", con matricula: "+getMatricula()+", alcanza una velocidad maxima de :"+getVelocidad();
     }
+  
 }

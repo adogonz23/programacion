@@ -17,7 +17,7 @@ public class Coche extends Vehiculo{
     public String toString(){
         return "El coche: "+getMarca()+", modelo: "+getModelo()+", con matricula: "+getMatricula()+", alcanza una velocidad maxima de :"+getVelocidad();
     }
-    
+ 
 
     
 }
