@@ -1,6 +1,7 @@
 package ies.puerto.vehiculos;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 
 
@@ -10,10 +11,18 @@ import ies.puerto.abstractas.Vehiculo;
 public class Concesionario {
     private HashSet<Coche>coches =new HashSet<>();
     private ArrayList<Motocicleta>motocicletas= new ArrayList<>();
-
+    private HashMap<Vehiculo,Camion>camiones= new HashMap<>();
+    private HashMap<Vehiculo,Bicicleta>bicicletas= new HashMap<>();
 
     
+    
+    /**
+     * Constructores de la clase concecionario
+     */
     public Concesionario() {
+    }
+    public Concesionario(HashMap<Vehiculo, Camion> camiones) {
+        this.camiones = camiones;
     }
     public Concesionario(ArrayList<Motocicleta> motocicletas) {
         this.motocicletas = motocicletas;
@@ -25,6 +34,17 @@ public class Concesionario {
         this.coches = coches;
         this.motocicletas = motocicletas;
     }
+    public Concesionario(HashSet<Coche> coches, ArrayList<Motocicleta> motocicletas, HashMap<Vehiculo, Camion> camiones,
+            HashMap<Vehiculo, Bicicleta> bicicletas) {
+        this.coches = coches;
+        this.motocicletas = motocicletas;
+        this.camiones = camiones;
+        this.bicicletas = bicicletas;
+    }
+    /**
+     * 
+     * Getter y setters de cada a
+     */
     public HashSet<Coche> getCoches() {
         return coches;
     }
@@ -36,6 +56,18 @@ public class Concesionario {
     }
     public void setMotocicletas(ArrayList<Motocicleta> motocicletas) {
         this.motocicletas = motocicletas;
+    }
+    public HashMap<Vehiculo, Camion> getCamiones() {
+        return camiones;
+    }
+    public void setCamiones(HashMap<Vehiculo, Camion> camiones) {
+        this.camiones = camiones;
+    }
+    public HashMap<Vehiculo, Bicicleta> getBicicletas() {
+        return bicicletas;
+    }
+    public void setBicicletas(HashMap<Vehiculo, Bicicleta> bicicletas) {
+        this.bicicletas = bicicletas;
     }
     public boolean addMotocicleta (Motocicleta motocicleta){
         if (motocicletas.contains(motocicleta)) {
