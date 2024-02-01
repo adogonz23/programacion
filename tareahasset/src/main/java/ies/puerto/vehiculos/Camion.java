@@ -10,7 +10,7 @@ public class Camion extends Vehiculo{
 
     @Override
     public int velocidadMaxima() {
-        int maxSpeed=180;
+        int maxSpeed=160;
 
         return maxSpeed;
     }

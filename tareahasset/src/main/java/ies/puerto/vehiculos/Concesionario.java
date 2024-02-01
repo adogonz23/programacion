@@ -153,5 +153,48 @@ public class Concesionario {
         
         return resultado;
     }
+    public float velocidadMediaCamion(){
+        float resultado=0;
+        if (camiones.isEmpty()) {
+            return resultado;
+        }
+        for ( Camion camion :camiones.values()){
+            resultado += camion.getVelocidad();
+        }
+        resultado= resultado/camiones.size();
+        return resultado;
+    }
+    public float velocidadMediabicicleta(){
+        float resultado=0;
+        if (bicicletas.isEmpty()) {
+            return resultado;
+        }
+        for ( Bicicleta bicicleta : bicicletas.values()){
+            resultado += bicicleta.getVelocidad();
+        }
+        resultado= resultado/bicicletas.size();
+        return resultado;
+    }
+    public boolean addCamion(Camion camion){
+        if (!camiones.containsValue(camion)) {
+            camiones.put(camion, camion);
+        }
+        return true;
+    }
+    public boolean removeCamion(Camion camion){
+        return true;
+    }
+    public boolean obtenerCocheCamion(String matricula){
+        return true;
+    }
+    public boolean addBici(Bicicleta bicicleta){
+        return true;
+    }
+    public boolean removeBici(Bicicleta bicicleta){
+        return true;
+    }
+    public boolean obtenerBici(String matricula){
+        return true;
+    }
     
 }
