@@ -27,13 +27,11 @@ public abstract class ProductoRecomendable extends Producto implements IRecomend
     
     @Override
     public int popularidad() {
-       
         return 0;
     }
 
     @Override
     public boolean recomendar() {
-        
         return false;
     }
     
