@@ -1,3 +1,4 @@
+package modelo.entity;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,7 +19,7 @@ public class SouvenirTest {
     CuidadoPersonal cuidadoPersonal2;
     
     @BeforeEach
-    public void BeforeEach(){ 
+    public void beforeEach(){ 
         souvenir = new Souvenir(id, nombre, precio, fEntrda);
         cuidadoPersonal = new CuidadoPersonal(id, nombre, precio, fEntrda, popularidad);
         cuidadoPersonal2 = new CuidadoPersonal(id, nombre, precio, fEntrda, popularidad2);

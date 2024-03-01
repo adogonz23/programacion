@@ -7,6 +7,9 @@ import ies.puerto.modelo.intefaces.IVendible;
 public abstract class Articulo  implements IVendible{
     public final String DELIMITADOR = ",";
     private String id;
+    public Articulo(String id) {
+        this.id = id;
+    }
     private String nombre;
     private float precio;
     private String fCaducidad;

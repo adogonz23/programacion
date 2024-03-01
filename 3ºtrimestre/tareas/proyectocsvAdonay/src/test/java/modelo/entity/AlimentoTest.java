@@ -1,3 +1,4 @@
+package modelo.entity;
 import java.util.Objects;
 
 import org.junit.jupiter.api.Assertions;
@@ -18,7 +19,7 @@ public class AlimentoTest {
     Alimento alimento;
     Alimento alimento2;
     @BeforeEach
-    public void BeforeEach(){
+    public void beforeEach(){
         alimento = new Alimento(id, nombre, precio, fCaducidad, fEntrda);
         alimento2 = new Alimento(id, nombre, precio, fCaducidad, fEntrda);
     }   

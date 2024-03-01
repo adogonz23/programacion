@@ -2,9 +2,7 @@ package ies.puerto.negocio.abstractas;
 
 import ies.puerto.modelo.abstractas.Articulo;
 import ies.puerto.modelo.entity.Alimento;
-import ies.puerto.modelo.entity.Aparato;
 import ies.puerto.modelo.entity.CuidadoPersonal;
-import ies.puerto.modelo.entity.Souvenir;
 import ies.puerto.modelo.fichero.csv.implementacion.FileCsv;
 
 import java.util.ArrayList;
@@ -107,5 +105,32 @@ public class TiendaNegocio {
     }
     public float ganancias(){
         return precioTotalTiendaMaximo() - precioTotalTienda();
+    }
+    public boolean existeProducto(Articulo articulo){
+        return obtenerArticulos().contains(articulo);
+    }
+    public Articulo obtenerProducto(Articulo articulo) {
+        if (existeProducto(articulo)) {
+            int posicion =obtenerArticulos().indexOf(articulo);
+            return obtenerArticulos().get(posicion);
+        }
+        return null;
+    }
+    public boolean crearProducto(Articulo articulo) {
+        if (!existeProducto(articulo)) {
+            return obtenerArticulos().add(articulo);
+        }
+        return true;
+    }
+    public boolean actualizarProducto(Articulo articulo) {
+        if (existeProducto(articulo)) {
+            int posicion =obtenerAlimentos().indexOf(articulo);
+            obtenerArticulos().set(posicion, articulo);
+            return true;
+        }
+        return true;
+    }
+    public boolean eliminarProducto(Articulo articulo) {
+    return obtenerArticulos().remove(articulo);
     }
 }

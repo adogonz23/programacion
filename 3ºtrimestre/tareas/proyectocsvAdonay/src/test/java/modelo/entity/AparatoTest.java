@@ -1,3 +1,4 @@
+package modelo.entity;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,7 +14,7 @@ public class AparatoTest {
     private String fEntrda= "01/01/2024";
     Aparato aparato;
     @BeforeEach
-    public void BeforeEach(){
+    public void beforeEach(){
         aparato =new Aparato(id, nombre, precio, fEntrda);
 
     }
