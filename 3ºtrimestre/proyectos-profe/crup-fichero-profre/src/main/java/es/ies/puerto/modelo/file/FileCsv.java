@@ -1,5 +1,4 @@
 package es.ies.puerto.modelo.file;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -77,4 +76,41 @@ public class FileCsv  extends Utilidades{
         }
         
     }
+    public void updatePerson(Persona persona){
+        List<Persona> personas = readAll();
+        try (FileWriter writer = new FileWriter(path)) {
+            for (Persona person : personas) {
+                if (person.getId() == persona.getId()) {
+                    writer.write(persona.getId() + "," + persona.getNombre() + "," + persona.getEdad() + "," + persona.getEmail() + "\n");
+                } else {
+                    writer.write(person.getId() + "," + person.getNombre() + "," + person.getEdad() + "," + person.getEmail() + "\n");
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public void deletePerson(int id){
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("data.csv"));
+            String nextLine;
+            StringBuilder updatedData = new StringBuilder();
+            boolean found = false;
+            while ((nextLine = reader.readLine()) != null) {
+                if (nextLine[0].equals(id)) {
+                    found = true;
+                } else {
+                    updatedData.append(String.join(DELIMITADOR, nextLine)).append("\n");
+                }
+            }
+            reader.close();
+            
+            FileWriter writer = new FileWriter("data.csv");
+            writer.writeAll();
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
 }
