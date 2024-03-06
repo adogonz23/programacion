@@ -133,4 +133,5 @@ public class TiendaNegocio {
     public boolean eliminarProducto(Articulo articulo) {
     return obtenerArticulos().remove(articulo);
     }
+    
 }

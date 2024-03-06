@@ -20,7 +20,9 @@ public abstract class FicheroAbstract {
         return fichero.exists() && fichero.isFile();
     }
 
-    public  boolean almacenarEnFichero(String path, String texto) {
+    public  boolean nuevaEntradaFichero(String path, String texto) {
+
+
         if (!existeFichero(path)) {
             return false;
         }
@@ -34,6 +36,7 @@ public abstract class FicheroAbstract {
         return true;
     }
     public boolean borrarEnFichero(){
+        
         return true;
     }
     public boolean actualizarEnFichero(){

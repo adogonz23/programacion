@@ -10,6 +10,9 @@ public class Alimento extends ArticuloFresco{
                     float precio, String fCaducidad, String fEntrada) {
         super(id, nombre, precio, fCaducidad, fEntrada);
     }
+    public Alimento(String id){
+        super(id);
+    }
     
 /**
  * Mejorable

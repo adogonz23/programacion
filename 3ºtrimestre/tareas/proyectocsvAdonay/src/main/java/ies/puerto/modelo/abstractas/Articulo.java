@@ -55,7 +55,7 @@ public abstract class Articulo  implements IVendible{
     }
 
     public String toCsv(){
-        return nombre+ DELIMITADOR +precio+DELIMITADOR+fEntrada+DELIMITADOR+id+DELIMITADOR+fCaducidad;
+        return nombre+ DELIMITADOR +precio+DELIMITADOR+fEntrada+DELIMITADOR+id+DELIMITADOR+fCaducidad +"\n";
     }
 
     public String getId() {

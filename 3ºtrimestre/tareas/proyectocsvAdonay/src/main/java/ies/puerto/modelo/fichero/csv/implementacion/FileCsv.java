@@ -9,6 +9,7 @@ import ies.puerto.modelo.fichero.abstractas.FicheroAbstract;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -74,7 +75,7 @@ public class FileCsv extends FicheroAbstract implements IFileInterface {
 
     @Override
     public boolean escritura(String path, String contenido) {
-        return almacenarEnFichero(path, contenido);
+        return nuevaEntradaFichero(path, contenido);
     }
 
     private Alimento splitToAlimento(String[] splitArray){
@@ -97,11 +98,28 @@ public class FileCsv extends FicheroAbstract implements IFileInterface {
 
 
     public boolean eliminar(String path, String id) {
-        throw new UnsupportedOperationException("Unimplemented method 'eliminar'");
+        List<Articulo>articulos= obtenerAlimentos();
+        Alimento alimento = new Alimento(id);
+        if (articulos.contains(alimento)) {
+            articulos.remove(alimento);
+            almacenarFichero(articulos,path);
+            return true;
+        }
+        return true;
     }
 
     @Override
     public boolean actualizar(String path, String contenido, String id) {
         throw new UnsupportedOperationException("Unimplemented method 'actualizar'");
+    }
+    public void almacenarFichero(List<Articulo>articulos,String path){
+        try(FileWriter writer = new FileWriter(path)) {
+            
+            for (Articulo articulo : articulos) {
+                writer.write(articulo.toCsv());
+            }
+        } catch (Exception e) {
+
+        }
     }
 }

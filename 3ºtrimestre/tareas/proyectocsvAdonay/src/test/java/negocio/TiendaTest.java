@@ -2,6 +2,8 @@ package negocio;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,6 +25,7 @@ public class TiendaTest {
     private float precioAct = 1;
     private String fCaducidadAct = "02/02/2024";
     private String fEntrdaAct= "02/01/2024";
+    private String path = "src/main/resources/alimentos.csv";
     
     @BeforeEach
     public void beforeEach(){
@@ -51,6 +54,12 @@ public class TiendaTest {
         alimentoBuscar = (Alimento) tiendaNegocio.obtenerProducto(alimentoBuscar);
         assertEquals(nombreActu, alimentoActualizar.getNombre());
         assertEquals(precioAct, alimentoActualizar.getPrecio());
+        
+    }
+    @Test
+    public void almacenarFicheroTest(){
+        List<Articulo>articulos = tiendaNegocio.obtenerAlimentos();
+        
         
     }
 
