@@ -1,0 +1,5 @@
+ies/puerto/modelo/entity/Alimento.class
+ies/puerto/modelo/file/implementacion/csv/FileCsv.class
+ies/puerto/negocio/implementacion/TiendaNegocio.class
+ies/puerto/modelo/file/intefaces/CRUDFile.class
+ies/puerto/modelo/file/abstrac/FileAbstrac.class
