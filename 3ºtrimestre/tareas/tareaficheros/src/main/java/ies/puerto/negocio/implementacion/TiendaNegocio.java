@@ -26,16 +26,9 @@ public class TiendaNegocio extends FileCsv{
     public boolean actualizarAlimento(Alimento alimento){
         List<Alimento> alimentos= obtenerListaAlimentos();
         if (existeAlimento(alimentos, alimento)) {
-            alimentos.set(alimentos.indexOf(alimento), alimento);
-            return true;
+            return fileCsv.actualizar(RUTA_FICHERO, alimento);
         }
         return false;
-    }
-    public boolean notEmpty(List<Alimento> alimentos){
-        if (alimentos.isEmpty()) {
-            return false;
-        }
-        return true;
     }
     public boolean existeAlimento(List<Alimento>alimentos,Alimento alimento){
         if (alimentos.contains(alimento)) {
@@ -46,9 +39,10 @@ public class TiendaNegocio extends FileCsv{
     public boolean eliminarAlimento(int id, List<Alimento>alimentos){
         Alimento alimento=new Alimento(id);
         if (alimentos.contains(alimento)) {
-            return alimentos.remove(alimento);
+            return fileCsv.eliminar(RUTA_FICHERO, id);
             
         }
         return true;
     }
+
 }

@@ -36,7 +36,6 @@ public class FileCsv extends FileAbstrac implements CRUDFile{
         }
         return alimentos;
     }
-
     
     public Alimento splitAlimento(String[] datos){
         return  new Alimento(Integer.parseInt(datos[0]), datos[1], datos[2],Integer.parseInt(datos[3]),Float.parseFloat(datos[4]),Float.parseFloat(datos[5]),Float.parseFloat(datos[6]));

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TiendaNegocio.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">examen</a> &gt; <a href="index.source.html" class="el_package">ies.puerto.negocio.implementacion</a> &gt; <span class="el_source">TiendaNegocio.java</span></div><h1>TiendaNegocio.java</h1><pre class="source lang-java linenums">package ies.puerto.negocio.implementacion;
+
+import java.util.List;
+
+import ies.puerto.modelo.entity.Alimento;
+import ies.puerto.modelo.file.implementacion.csv.FileCsv;
+
+public class TiendaNegocio extends FileCsv{
+    FileCsv fileCsv;
+    
+<span class="fc" id="L11">    public TiendaNegocio(){</span>
+<span class="fc" id="L12">        fileCsv =new FileCsv();</span>
+<span class="fc" id="L13">    }</span>
+    public List&lt;Alimento&gt; obtenerListaAlimentos(){
+<span class="fc" id="L15">        return fileCsv.obtenerAlimentos();</span>
+    }
+    public Alimento mostrarAlimento(int id){
+<span class="fc" id="L18">        Alimento alimento = new Alimento(id);</span>
+<span class="fc" id="L19">        List&lt;Alimento&gt; alimentos= obtenerAlimentos();</span>
+<span class="pc bpc" id="L20" title="1 of 2 branches missed.">        if (alimentos.contains(alimento)) {</span>
+<span class="fc" id="L21">            return alimentos.get(alimentos.indexOf(alimento));</span>
+        }
+<span class="nc" id="L23">        alimento=null;</span>
+<span class="nc" id="L24">        return alimento;</span>
+    }
+    public boolean actualizarAlimento(Alimento alimento){
+<span class="fc" id="L27">        List&lt;Alimento&gt; alimentos= obtenerListaAlimentos();</span>
+<span class="pc bpc" id="L28" title="1 of 2 branches missed.">        if (existeAlimento(alimentos, alimento)) {</span>
+<span class="fc" id="L29">            return fileCsv.actualizar(RUTA_FICHERO, alimento);</span>
+        }
+<span class="nc" id="L31">        return false;</span>
+    }
+    public boolean existeAlimento(List&lt;Alimento&gt;alimentos,Alimento alimento){
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">        if (alimentos.contains(alimento)) {</span>
+<span class="fc" id="L35">            return true;</span>
+        }
+<span class="nc" id="L37">        return false;</span>
+    }
+    public boolean eliminarAlimento(int id, List&lt;Alimento&gt;alimentos){
+<span class="fc" id="L40">        Alimento alimento=new Alimento(id);</span>
+<span class="pc bpc" id="L41" title="1 of 2 branches missed.">        if (alimentos.contains(alimento)) {</span>
+<span class="fc" id="L42">            return fileCsv.eliminar(RUTA_FICHERO, id);</span>
+            
+        }
+<span class="nc" id="L45">        return true;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
