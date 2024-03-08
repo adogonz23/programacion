@@ -1,0 +1,9 @@
+<alimento>
+    <id>1</id>
+    <nombre>nombre</nombre>
+    <tipo>Fruta</tipo>
+    <calorias>52</calorias>
+    <proteinas>0.3</proteinas>
+    <grasas>0.2</grasas>
+    <carbohidratos>14</carbohidratos>
+</alimento>
