@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: ies.puerto.modelo.FilecsvTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.211 s <<< FAILURE! - in ies.puerto.modelo.FilecsvTest
+ies.puerto.modelo.FilecsvTest.ObternerPersonaTest  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: El resultado no es el esperado ==> expected: <28> but was: <99>
+	at ies.puerto.modelo.FilecsvTest.ObternerPersonaTest(FilecsvTest.java:32)
+
