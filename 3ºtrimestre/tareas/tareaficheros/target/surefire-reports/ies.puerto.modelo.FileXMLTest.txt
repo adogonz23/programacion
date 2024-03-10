@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: ies.puerto.modelo.FileXMLTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.398 s <<< FAILURE! - in ies.puerto.modelo.FileXMLTest
-ies.puerto.modelo.FileXMLTest.ObternerPersonaTest  Time elapsed: 0.01 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: El resultado no es el esperado ==> expected: <28> but was: <99>
-	at ies.puerto.modelo.FileXMLTest.ObternerPersonaTest(FileXMLTest.java:32)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.215 s - in ies.puerto.modelo.FileXMLTest

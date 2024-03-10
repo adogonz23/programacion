@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FileJson.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Proyecto file</a> &gt; <a href="index.source.html" class="el_package">ies.puerto.modelo.file.json.implementacion</a> &gt; <span class="el_source">FileJson.java</span></div><h1>FileJson.java</h1><pre class="source lang-java linenums">package ies.puerto.modelo.file.json.implementacion;
+
+import java.io.FileWriter;
+import java.lang.reflect.Type;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+
+import ies.puerto.modelo.entity.Persona;
+import ies.puerto.modelo.file.abstractas.FlieAbstrac;
+import ies.puerto.modelo.interfaces.CRUDoperaciones;
+
+<span class="fc" id="L18">public class FileJson extends FlieAbstrac implements CRUDoperaciones {</span>
+    List&lt;Persona&gt; personas;
+<span class="fc" id="L20">    String RUTA_FICHERO= &quot;src/resources/data.json&quot;;</span>
+    
+    public String getRUTA_FICHERO() {
+<span class="fc" id="L23">        return RUTA_FICHERO;</span>
+    }
+
+
+
+    @Override
+    public List&lt;Persona&gt; obtenerDatos(String path) {
+        
+            try {
+<span class="fc" id="L32">                String json= new String(Files.readAllBytes(Paths.get(path)));</span>
+<span class="fc" id="L33">                Type listType = new TypeToken&lt;List&lt;Persona&gt;&gt;(){}.getType();</span>
+<span class="fc" id="L34">                personas = new Gson().fromJson(json, listType);</span>
+<span class="fc" id="L35">                return personas;</span>
+<span class="nc" id="L36">            } catch (Exception e) {</span>
+<span class="nc" id="L37">                e.printStackTrace();</span>
+        }
+<span class="nc" id="L39">        return personas;</span>
+    }
+
+    
+
+    @Override
+    public boolean actualizarPersona(Persona persona) {
+<span class="pc bpc" id="L46" title="1 of 2 branches missed.">        if (personas.contains(persona)) {</span>
+<span class="fc" id="L47">            int posicion = personas.indexOf(persona);</span>
+<span class="fc" id="L48">            personas.set(posicion, persona);</span>
+            try {
+<span class="fc" id="L50">                escribirFichero(RUTA_FICHERO);</span>
+<span class="nc" id="L51">            } catch (Exception e) {</span>
+<span class="nc" id="L52">                e.printStackTrace();</span>
+<span class="fc" id="L53">            }</span>
+        }
+<span class="fc" id="L55">        return false;</span>
+    }
+
+    @Override
+    public boolean añadirPersona(Persona persona, String path) {
+<span class="pc bpc" id="L60" title="1 of 2 branches missed.">        if (personas.contains(persona)) {</span>
+<span class="nc" id="L61">            return true;</span>
+        }
+<span class="fc" id="L63">        personas.add(persona);</span>
+        try {
+<span class="fc" id="L65">            escribirFichero(path);</span>
+<span class="fc" id="L66">            return true;</span>
+<span class="nc" id="L67">        } catch (Exception e) {</span>
+<span class="nc" id="L68">            e.printStackTrace();</span>
+<span class="nc" id="L69">            return false;</span>
+        }
+    }
+
+    @Override
+    public Persona obtenerPersona(int id, String path) {
+<span class="fc" id="L75">        Persona persona = new Persona(id);</span>
+<span class="pc bpc" id="L76" title="1 of 2 branches missed.">        if (personas.contains(persona)) {</span>
+<span class="fc" id="L77">            int posicion = personas.indexOf(persona);</span>
+<span class="fc" id="L78">            persona = personas.get(posicion);</span>
+<span class="fc" id="L79">            return persona;</span>
+        }
+<span class="nc" id="L81">        return null;</span>
+    }
+
+    @Override
+    public boolean eliminarPersonas(Persona persona, String path) {
+<span class="pc bpc" id="L86" title="1 of 2 branches missed.">        if (personas.contains(persona)) {</span>
+<span class="fc" id="L87">            personas.remove(persona);</span>
+            try {
+<span class="fc" id="L89">                escribirFichero(path);</span>
+<span class="fc" id="L90">                return true;</span>
+<span class="nc" id="L91">            } catch (Exception e) {</span>
+<span class="nc" id="L92">                e.printStackTrace();</span>
+            }
+        }
+<span class="nc" id="L95">        return false;</span>
+    }
+    public void escribirFichero(String path){
+<span class="pc bpc" id="L98" title="2 of 4 branches missed.">        if (existeFichero(path)&amp;&amp; !personas.isEmpty()) {</span>
+<span class="fc" id="L99">            try (FileWriter writer = new FileWriter(path)){</span>
+<span class="fc" id="L100">            new GsonBuilder().setPrettyPrinting().create().toJson(personas,writer);</span>
+<span class="nc" id="L101">            } catch (Exception e) {</span>
+<span class="nc" id="L102">                e.printStackTrace();</span>
+<span class="fc" id="L103">            }</span>
+        }
+        
+<span class="fc" id="L106">    }</span>
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

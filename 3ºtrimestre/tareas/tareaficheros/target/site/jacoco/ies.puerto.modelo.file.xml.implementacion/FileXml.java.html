@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FileXml.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Proyecto file</a> &gt; <a href="index.source.html" class="el_package">ies.puerto.modelo.file.xml.implementacion</a> &gt; <span class="el_source">FileXml.java</span></div><h1>FileXml.java</h1><pre class="source lang-java linenums">package ies.puerto.modelo.file.xml.implementacion;
+
+import java.io.File;
+import java.util.List;
+
+import org.simpleframework.xml.core.Persister;
+
+import ies.puerto.modelo.entity.ListPersona;
+import ies.puerto.modelo.entity.Persona;
+import ies.puerto.modelo.file.abstractas.FlieAbstrac;
+import ies.puerto.modelo.interfaces.CRUDoperaciones;
+
+<span class="fc" id="L13">public class FileXml  extends FlieAbstrac implements CRUDoperaciones {</span>
+<span class="fc" id="L14">    public String RUTA_FICHERO= &quot;src/resources/data.xml&quot;;</span>
+    List&lt;Persona&gt; personas;
+    public String getRUTA_FICHERO() {
+<span class="fc" id="L17">        return RUTA_FICHERO;</span>
+    }
+
+    @Override
+    public List&lt;Persona&gt; obtenerDatos(String path) {
+<span class="fc" id="L22">        Persister serializer = new Persister();</span>
+<span class="fc" id="L23">        File file =new File(path);</span>
+<span class="pc bpc" id="L24" title="1 of 2 branches missed.">        if (existeFichero(path)) {</span>
+            try {
+<span class="fc" id="L26">                ListPersona personalist = serializer.read(ListPersona.class, file);</span>
+<span class="fc" id="L27">                personas = personalist.getPersonas();</span>
+<span class="fc" id="L28">                return personas;</span>
+<span class="nc" id="L29">            } catch (Exception e) {</span>
+<span class="nc" id="L30">                throw new RuntimeException(e);</span>
+            }
+        }
+<span class="nc" id="L33">        return personas;</span>
+    }
+
+    @Override
+    public boolean actualizarPersona(Persona persona) {
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">        if (personas.contains(persona)) {</span>
+<span class="fc" id="L39">            int posicion = personas.indexOf(persona);</span>
+<span class="fc" id="L40">            personas.set(posicion, persona);</span>
+            try {
+<span class="fc" id="L42">                escribirFichero(personas, RUTA_FICHERO);</span>
+<span class="fc" id="L43">                return true;</span>
+<span class="nc" id="L44">            } catch (Exception e) {</span>
+<span class="nc" id="L45">                e.printStackTrace();</span>
+            }
+        }
+<span class="nc" id="L48">        return false;</span>
+    }
+
+    @Override
+    public boolean añadirPersona(Persona persona, String path) {
+<span class="pc bpc" id="L53" title="1 of 2 branches missed.">        if (personas.contains(persona)) {</span>
+<span class="nc" id="L54">            return true;</span>
+        }
+<span class="fc" id="L56">        personas.add(persona);</span>
+<span class="fc" id="L57">        escribirFichero(personas, path);</span>
+<span class="fc" id="L58">        return true;</span>
+    }
+
+    @Override
+    public Persona obtenerPersona(int id, String path) {
+<span class="fc" id="L63">        Persona persona=new Persona(id);</span>
+<span class="fc" id="L64">        personas = obtenerDatos(path);</span>
+<span class="fc" id="L65">        int posicion =  personas.indexOf(persona);</span>
+<span class="pc bpc" id="L66" title="1 of 2 branches missed.">        if (personas.contains(persona) ) {</span>
+<span class="fc" id="L67">            return personas.get(posicion);</span>
+        }
+<span class="nc" id="L69">        return null;</span>
+    }
+
+    @Override
+    public boolean eliminarPersonas(Persona persona, String path) {
+<span class="pc bpc" id="L74" title="1 of 2 branches missed.">        if (!personas.contains(persona)) {</span>
+<span class="nc" id="L75">        return true;</span>
+        }
+<span class="fc" id="L77">        personas.remove(persona);</span>
+<span class="fc" id="L78">        escribirFichero(personas, path);</span>
+<span class="fc" id="L79">        return true;</span>
+    }
+    public void escribirFichero(List&lt;Persona&gt; personas, String path){
+<span class="fc" id="L82">        ListPersona listPersona = new ListPersona(personas);</span>
+<span class="fc" id="L83">        Persister serializer = new Persister();</span>
+<span class="fc" id="L84">        File file = new File(path);</span>
+        try {
+<span class="fc" id="L86">            serializer.write(listPersona, file);</span>
+<span class="nc" id="L87">        } catch (Exception e) {</span>
+<span class="nc" id="L88">            e.printStackTrace();</span>
+<span class="fc" id="L89">        }</span>
+<span class="fc" id="L90">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -1,7 +1,8 @@
-ies\puerto\modelo\file\json\implementacion\FileJson.class
-ies\puerto\modelo\file\csv\implementacion\FileCsv.class
-ies\puerto\modelo\file\xml\implementacion\FileXml.class
-ies\puerto\modelo\entity\ListPersona.class
-ies\puerto\modelo\entity\Persona.class
-ies\puerto\modelo\file\abstractas\FlieAbstrac.class
-ies\puerto\modelo\interfaces\CRUDoperaciones.class
+ies/puerto/modelo/entity/ListPersona.class
+ies/puerto/modelo/file/xml/implementacion/FileXml.class
+ies/puerto/modelo/file/json/implementacion/FileJson$1.class
+ies/puerto/modelo/entity/Persona.class
+ies/puerto/modelo/file/json/implementacion/FileJson.class
+ies/puerto/modelo/interfaces/CRUDoperaciones.class
+ies/puerto/modelo/file/abstractas/FlieAbstrac.class
+ies/puerto/modelo/file/csv/implementacion/FileCsv.class

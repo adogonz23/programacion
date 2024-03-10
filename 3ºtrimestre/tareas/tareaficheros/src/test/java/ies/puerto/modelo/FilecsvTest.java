@@ -29,7 +29,7 @@ public class FilecsvTest {
     @Test
     public void ObternerPersonaTest(){
         Persona persona= persistencia.obtenerPersona(2,persistencia.getRUTA_FICHERO());
-        Assertions.assertEquals(persona.getEdad(), edad2,MSN_ERROR);
+        Assertions.assertEquals(persona.getEdad(), 28,MSN_ERROR);
     }
     @Test
     public void añadirPersona(){
