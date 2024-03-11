@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Proyecto file,ies.puerto.modelo.file.implementacion.fileCsv,FileCsv,8,124,1,7,5,24,1,7,0,4
+Proyecto file,ies.puerto.modelo.entity,Poder,10,9,0,0,5,4,3,2,3,2
+Proyecto file,ies.puerto.modelo.entity,Personaje,109,28,14,0,35,8,20,2,13,2
+Proyecto file,ies.puerto.modelo.entity,PersonajeList,10,0,0,0,4,0,3,0,3,0
+Proyecto file,ies.puerto.modelo.entity,PoderList,10,0,0,0,4,0,3,0,3,0
+Proyecto file,ies.puerto.modelo.file.abstractas,FileAbs,3,22,4,4,1,4,4,2,0,2

@@ -1,0 +1,6 @@
+ies/puerto/modelo/entity/Poder.class
+ies/puerto/modelo/entity/PersonajeList.class
+ies/puerto/modelo/file/implementacion/fileCsv/FileCsv.class
+ies/puerto/modelo/file/abstractas/FileAbs.class
+ies/puerto/modelo/entity/Personaje.class
+ies/puerto/modelo/entity/PoderList.class

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FileCsv.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Proyecto file</a> &gt; <a href="index.source.html" class="el_package">ies.puerto.modelo.file.implementacion.fileCsv</a> &gt; <span class="el_source">FileCsv.java</span></div><h1>FileCsv.java</h1><pre class="source lang-java linenums">package ies.puerto.modelo.file.implementacion.fileCsv;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+import ies.puerto.modelo.entity.Personaje;
+import ies.puerto.modelo.entity.Poder;
+import ies.puerto.modelo.file.abstractas.FileAbs;
+
+<span class="fc" id="L15">public class FileCsv extends FileAbs {</span>
+    
+    List&lt;Personaje&gt;personajes;
+
+<span class="fc" id="L19">    String RUTA_CSV= &quot;src/resources/data.csv&quot;;</span>
+
+    public List&lt;Personaje&gt; obtenerDatos(){
+<span class="fc" id="L22">        personajes= new ArrayList&lt;&gt;();</span>
+<span class="pc bpc" id="L23" title="1 of 2 branches missed.">        if (existeFichero(RUTA_CSV)) {</span>
+<span class="fc" id="L24">            File file = new File(RUTA_CSV);</span>
+<span class="fc" id="L25">            try (BufferedReader reader = new BufferedReader(new FileReader(file))){</span>
+                String linea;
+<span class="fc bfc" id="L27" title="All 2 branches covered.">                while ((linea= reader.readLine())!=null) {</span>
+<span class="fc" id="L28">                    String[] datos = linea.split(&quot;,&quot;);</span>
+<span class="fc" id="L29">                    Personaje personaje= splitPersonaje(datos);</span>
+<span class="fc" id="L30">                    personajes.add(personaje);</span>
+<span class="fc" id="L31">                }</span>
+<span class="nc" id="L32">            } catch (Exception e) {</span>
+<span class="nc" id="L33">                e.printStackTrace();</span>
+<span class="fc" id="L34">            }</span>
+        }
+<span class="fc" id="L36">        return personajes;</span>
+    }
+    public Personaje splitPersonaje(String[]datos){
+<span class="fc" id="L39">        List&lt;Poder&gt;poderes= new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L40">        Personaje personaje= new Personaje(datos[0],datos[1], datos[2], poderes);</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">        for(int i=3; i&lt; datos.length;i++){</span>
+<span class="fc" id="L42">            Poder poder = new Poder(datos[i]);</span>
+<span class="fc" id="L43">            poderes.add(poder);</span>
+        }
+<span class="fc" id="L45">        return personaje;</span>
+    }
+    public boolean escribirFichero( List&lt;Personaje&gt;personajes){
+        
+<span class="fc" id="L49">        try(BufferedWriter writer = new BufferedWriter(new FileWriter(new File(RUTA_CSV)))){</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">            for (Personaje personaje : personajes) {</span>
+<span class="fc" id="L51">                writer.write(personaje.toCsv()+&quot;\n&quot;);</span>
+<span class="fc" id="L52">            }</span>
+<span class="fc" id="L53">            return true;</span>
+<span class="nc" id="L54">        } catch (Exception e) {</span>
+<span class="nc" id="L55">            e.printStackTrace();</span>
+<span class="nc" id="L56">            return false;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

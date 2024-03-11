@@ -29,7 +29,6 @@ public class FileCsv extends FileAbs {
                     Personaje personaje= splitPersonaje(datos);
                     personajes.add(personaje);
                 }
-                return personajes;
             } catch (Exception e) {
                 e.printStackTrace();
             }

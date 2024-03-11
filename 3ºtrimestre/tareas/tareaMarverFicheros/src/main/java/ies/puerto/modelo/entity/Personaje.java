@@ -57,7 +57,7 @@ public class Personaje {
     }
     @Override
     public String toString() {
-        return "Personaje [nombre=" + nombre + ", alias=" + alias + ", genero=" + genero + ", poderes=" + poderes + "]";
+        return "Personaje nombre=" + nombre + ", alias=" + alias + ", genero=" + genero + ", poderes=" + poderes + "]";
     }
     @Override
     public int hashCode() {
