@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: ies.puerto.modelo.FilecsvTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 s - in ies.puerto.modelo.FilecsvTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s - in ies.puerto.modelo.FilecsvTest

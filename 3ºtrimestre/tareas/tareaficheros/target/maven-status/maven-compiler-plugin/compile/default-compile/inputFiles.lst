@@ -1,7 +1,7 @@
-/home/dam/Documentos/programacion/3ºtrimestre/tareas/tareaficheros/src/main/java/ies/puerto/modelo/entity/ListPersona.java
-/home/dam/Documentos/programacion/3ºtrimestre/tareas/tareaficheros/src/main/java/ies/puerto/modelo/interfaces/CRUDoperaciones.java
-/home/dam/Documentos/programacion/3ºtrimestre/tareas/tareaficheros/src/main/java/ies/puerto/modelo/file/csv/implementacion/FileCsv.java
-/home/dam/Documentos/programacion/3ºtrimestre/tareas/tareaficheros/src/main/java/ies/puerto/modelo/file/xml/implementacion/FileXml.java
-/home/dam/Documentos/programacion/3ºtrimestre/tareas/tareaficheros/src/main/java/ies/puerto/modelo/file/abstractas/FlieAbstrac.java
-/home/dam/Documentos/programacion/3ºtrimestre/tareas/tareaficheros/src/main/java/ies/puerto/modelo/file/json/implementacion/FileJson.java
-/home/dam/Documentos/programacion/3ºtrimestre/tareas/tareaficheros/src/main/java/ies/puerto/modelo/entity/Persona.java
+/home/adonay/Documentos/programacion/3ºtrimestre/tareas/tareaficheros/src/main/java/ies/puerto/modelo/file/xml/implementacion/FileXml.java
+/home/adonay/Documentos/programacion/3ºtrimestre/tareas/tareaficheros/src/main/java/ies/puerto/modelo/interfaces/CRUDoperaciones.java
+/home/adonay/Documentos/programacion/3ºtrimestre/tareas/tareaficheros/src/main/java/ies/puerto/modelo/entity/Persona.java
+/home/adonay/Documentos/programacion/3ºtrimestre/tareas/tareaficheros/src/main/java/ies/puerto/modelo/entity/ListPersona.java
+/home/adonay/Documentos/programacion/3ºtrimestre/tareas/tareaficheros/src/main/java/ies/puerto/modelo/file/json/implementacion/FileJson.java
+/home/adonay/Documentos/programacion/3ºtrimestre/tareas/tareaficheros/src/main/java/ies/puerto/modelo/file/csv/implementacion/FileCsv.java
+/home/adonay/Documentos/programacion/3ºtrimestre/tareas/tareaficheros/src/main/java/ies/puerto/modelo/file/abstractas/FlieAbstrac.java

@@ -50,39 +50,39 @@ import ies.puerto.modelo.interfaces.CRUDoperaciones;
 <span class="nc" id="L50">            return true;</span>
         }
 <span class="fc" id="L52">        personas.add(persona);</span>
-<span class="fc" id="L53">        escribirFichero(personas, path);</span>
-<span class="fc" id="L54">        return true;</span>
+<span class="fc" id="L53">        return escribirFichero(personas, path);</span>
     }
 
     @Override
     public Persona obtenerPersona(int id, String path) {
-<span class="fc" id="L59">        Persona persona=new Persona(id);</span>
-<span class="fc" id="L60">        personas = obtenerDatos(path);</span>
-<span class="fc" id="L61">        int posicion =  personas.indexOf(persona);</span>
-<span class="pc bpc" id="L62" title="1 of 2 branches missed.">        if (personas.contains(persona) ) {</span>
-<span class="fc" id="L63">            return personas.get(posicion);</span>
+<span class="fc" id="L58">        Persona persona=new Persona(id);</span>
+<span class="fc" id="L59">        personas = obtenerDatos(path);</span>
+<span class="fc" id="L60">        int posicion =  personas.indexOf(persona);</span>
+<span class="pc bpc" id="L61" title="1 of 2 branches missed.">        if (personas.contains(persona) ) {</span>
+<span class="fc" id="L62">            return personas.get(posicion);</span>
         }
-<span class="nc" id="L65">        return null;</span>
+<span class="nc" id="L64">        return null;</span>
     }
 
     @Override
     public boolean eliminarPersonas(Persona persona, String path) {
-<span class="pc bpc" id="L70" title="1 of 2 branches missed.">        if (!personas.contains(persona)) {</span>
-<span class="nc" id="L71">        return true;</span>
+<span class="pc bpc" id="L69" title="1 of 2 branches missed.">        if (!personas.contains(persona)) {</span>
+<span class="nc" id="L70">        return true;</span>
         }
-<span class="fc" id="L73">        personas.remove(persona);</span>
-<span class="fc" id="L74">        escribirFichero(personas, path);</span>
-<span class="fc" id="L75">        return true;</span>
+<span class="fc" id="L72">        personas.remove(persona);</span>
+<span class="fc" id="L73">        return escribirFichero(personas, path);</span>
     }
-    public void escribirFichero(List&lt;Persona&gt; personas, String path){
-<span class="fc" id="L78">        ListPersona listPersona = new ListPersona(personas);</span>
-<span class="fc" id="L79">        Persister serializer = new Persister();</span>
-<span class="fc" id="L80">        File file = new File(path);</span>
+    public boolean escribirFichero(List&lt;Persona&gt; personas, String path){
+<span class="fc" id="L76">        ListPersona listPersona = new ListPersona(personas);</span>
+<span class="fc" id="L77">        Persister serializer = new Persister();</span>
+<span class="fc" id="L78">        File file = new File(path);</span>
         try {
-<span class="fc" id="L82">            serializer.write(listPersona, file);</span>
-<span class="nc" id="L83">        } catch (Exception e) {</span>
-<span class="nc" id="L84">            e.printStackTrace();</span>
-<span class="fc" id="L85">        }</span>
-<span class="fc" id="L86">    }</span>
+<span class="fc" id="L80">            serializer.write(listPersona, file);</span>
+<span class="fc" id="L81">            return true;</span>
+<span class="nc" id="L82">        } catch (Exception e) {</span>
+<span class="nc" id="L83">            e.printStackTrace();</span>
+<span class="nc" id="L84">            return false;</span>
+        }
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
