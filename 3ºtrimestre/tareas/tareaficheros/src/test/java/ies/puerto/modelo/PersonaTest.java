@@ -36,7 +36,6 @@ public class PersonaTest {
         Assertions.assertTrue(persona.toCsv().contains(String.valueOf(id)),MSN_ERROR);
         Assertions.assertTrue(persona.toCsv().contains(email),MSN_ERROR);
         Assertions.assertTrue(persona.toCsv().contains(String.valueOf(edad)),MSN_ERROR);
-        
     }
     @Test
     public void getSetTes(){

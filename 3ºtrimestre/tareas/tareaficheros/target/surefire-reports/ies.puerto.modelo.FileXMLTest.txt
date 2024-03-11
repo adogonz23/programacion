@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: ies.puerto.modelo.FileXMLTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.215 s - in ies.puerto.modelo.FileXMLTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 s - in ies.puerto.modelo.FileXMLTest

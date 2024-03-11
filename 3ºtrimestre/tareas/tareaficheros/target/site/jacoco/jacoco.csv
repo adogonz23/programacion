@@ -1,8 +1,8 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-Proyecto file,ies.puerto.modelo.file.json.implementacion,FileJson,26,136,6,6,15,31,6,8,0,8
+Proyecto file,ies.puerto.modelo.file.json.implementacion,FileJson,15,131,5,5,8,30,5,8,0,8
 Proyecto file,ies.puerto.modelo.file.json.implementacion,FileJson.new TypeToken() {...},0,6,0,0,0,1,0,1,0,1
 Proyecto file,ies.puerto.modelo.entity,ListPersona,4,12,0,0,2,6,1,3,1,3
 Proyecto file,ies.puerto.modelo.entity,Persona,22,96,3,5,8,30,5,13,2,12
 Proyecto file,ies.puerto.modelo.file.csv.implementacion,FileCsv,14,180,7,11,8,42,7,11,0,9
 Proyecto file,ies.puerto.modelo.file.abstractas,FlieAbstrac,3,22,4,4,1,4,4,2,0,2
-Proyecto file,ies.puerto.modelo.file.xml.implementacion,FileXml,23,139,5,5,11,33,5,8,0,8
+Proyecto file,ies.puerto.modelo.file.xml.implementacion,FileXml,20,139,5,5,9,33,5,8,0,8

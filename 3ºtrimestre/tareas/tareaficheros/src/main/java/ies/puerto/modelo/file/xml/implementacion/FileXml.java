@@ -38,12 +38,8 @@ public class FileXml  extends FlieAbstrac implements CRUDoperaciones {
         if (personas.contains(persona)) {
             int posicion = personas.indexOf(persona);
             personas.set(posicion, persona);
-            try {
                 escribirFichero(personas, RUTA_FICHERO);
                 return true;
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
         }
         return false;
     }
@@ -54,8 +50,7 @@ public class FileXml  extends FlieAbstrac implements CRUDoperaciones {
             return true;
         }
         personas.add(persona);
-        escribirFichero(personas, path);
-        return true;
+        return escribirFichero(personas, path);
     }
 
     @Override
@@ -75,17 +70,18 @@ public class FileXml  extends FlieAbstrac implements CRUDoperaciones {
         return true;
         }
         personas.remove(persona);
-        escribirFichero(personas, path);
-        return true;
+        return escribirFichero(personas, path);
     }
-    public void escribirFichero(List<Persona> personas, String path){
+    public boolean escribirFichero(List<Persona> personas, String path){
         ListPersona listPersona = new ListPersona(personas);
         Persister serializer = new Persister();
         File file = new File(path);
         try {
             serializer.write(listPersona, file);
+            return true;
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
     }
 }

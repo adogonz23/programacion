@@ -46,11 +46,7 @@ public class FileJson extends FlieAbstrac implements CRUDoperaciones {
         if (personas.contains(persona)) {
             int posicion = personas.indexOf(persona);
             personas.set(posicion, persona);
-            try {
                 escribirFichero(RUTA_FICHERO);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
         }
         return false;
     }
@@ -61,13 +57,9 @@ public class FileJson extends FlieAbstrac implements CRUDoperaciones {
             return true;
         }
         personas.add(persona);
-        try {
             escribirFichero(path);
             return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
+
     }
 
     @Override
@@ -85,17 +77,13 @@ public class FileJson extends FlieAbstrac implements CRUDoperaciones {
     public boolean eliminarPersonas(Persona persona, String path) {
         if (personas.contains(persona)) {
             personas.remove(persona);
-            try {
                 escribirFichero(path);
                 return true;
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
         }
         return false;
     }
     public void escribirFichero(String path){
-        if (existeFichero(path)&& !personas.isEmpty()) {
+        if (existeFichero(path)) {
             try (FileWriter writer = new FileWriter(path)){
             new GsonBuilder().setPrettyPrinting().create().toJson(personas,writer);
             } catch (Exception e) {
