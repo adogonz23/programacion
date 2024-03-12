@@ -1,34 +1,27 @@
 package ies.puerto.modelo.entity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
-@Root
+
+@Root (name = "personaje")
 public class Personaje {
-    @Element
+    @Element (name="nombre")
     private String nombre;
-    @Element
+    @Element(name = "alias")
     private String alias;
-    @Element
+    @Element(name ="genero")
     private String genero;
     @ElementList(name = "poderes")
-    private List<Poder> poderes;
-    
+    private List<String> poderes;
     public final String DELIMITADOR =",";
-    public final String COMILLAS = "\"";
     
-
-    
-    public Personaje() {
-            poderes= new ArrayList<>();
-    }
     public Personaje(String nombre) {
         this.nombre = nombre;
     }
-    public Personaje(String nombre, String alias, String genero, List<Poder> poderes) {
+    public Personaje(String nombre, String alias, String genero, List<String> poderes) {
         this.nombre = nombre;
         this.alias = alias;
         this.genero = genero;
@@ -52,10 +45,10 @@ public class Personaje {
     public void setGenero(String genero) {
         this.genero = genero;
     }
-    public List<Poder> getPoderes() {
+    public List<String> getPoderes() {
         return poderes;
     }
-    public void setPoderes(List<Poder> poderes) {
+    public void setPoderes(List<String> poderes) {
         this.poderes = poderes;
     }
     @Override
@@ -86,20 +79,19 @@ public class Personaje {
         return true;
     }
     public String toCsv(){
-        return nombre+DELIMITADOR+alias+DELIMITADOR+genero+DELIMITADOR+COMILLAS+poderestoString()+COMILLAS;
+        return nombre+DELIMITADOR+alias+DELIMITADOR+genero+DELIMITADOR+poderesToCsv();
     }
-    public String poderestoString(){
-        String poderesString="";
-        for (Poder poder : poderes) {
-            int posicion;
-            if (( posicion = poderes.indexOf(poder))== poderes.size()-1) {
-                poderesString+=poder.toCsv();
-            }else{
-                poderesString+=poder.toCsv()+DELIMITADOR;
+    public String poderesToCsv(){
+        String podresCsv="";
+        for (String poder : poderes) {
+            if (poderes.indexOf(poder)== (poderes.size()-1)) {
+                podresCsv+= poder;
             }
-            
+            else{
+                podresCsv+= poder+",";
+            }
         }
-
-        return poderesString;
+        return podresCsv;
     }
+    
 }

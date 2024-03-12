@@ -8,20 +8,14 @@ import org.simpleframework.xml.Root;
 @Root(name ="poderes")
 public class PoderList {
     @ElementList(inline = true)
-    List<Poder>poderes;
+    List<String>poderes;
 
-    public List<Poder> getPoderes() {
+    public List<String> getPoderes() {
         return poderes;
     }
 
-    public void setPoderes(List<Poder> poderes) {
+    public void setPoderes(List<String> poderes) {
         this.poderes = poderes;
     }
 
-    @Override
-    public String toString() {
-        return "PoderList [poderes=" + poderes + "]";
-    }
-
-    
 }

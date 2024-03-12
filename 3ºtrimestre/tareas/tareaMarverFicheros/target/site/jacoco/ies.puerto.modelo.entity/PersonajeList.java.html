@@ -6,19 +6,26 @@ import java.util.List;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
-@Root(name = &quot;personajes&quot;)
-<span class="nc" id="L10">public class PersonajeList {</span>
+@Root (name = &quot;personajes&quot;)
+public class PersonajeList {
     @ElementList(inline = true)
     private List&lt;Personaje&gt; personajes;
     
 
 
+<span class="fc" id="L16">    public PersonajeList() {</span>
+<span class="fc" id="L17">    }</span>
+
+<span class="fc" id="L19">    public PersonajeList(List&lt;Personaje&gt; personajes) {</span>
+<span class="fc" id="L20">        this.personajes = personajes;</span>
+<span class="fc" id="L21">    }</span>
+
     public List&lt;Personaje&gt; getPersonajes() {
-<span class="nc" id="L17">        return personajes;</span>
+<span class="nc" id="L24">        return personajes;</span>
     }
 
     public void setPersonajes(List&lt;Personaje&gt; personajes) {
-<span class="nc" id="L21">        this.personajes = personajes;</span>
-<span class="nc" id="L22">    }</span>
+<span class="nc" id="L28">        this.personajes = personajes;</span>
+<span class="nc" id="L29">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

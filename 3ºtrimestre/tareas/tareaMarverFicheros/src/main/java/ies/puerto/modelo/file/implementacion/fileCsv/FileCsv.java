@@ -9,10 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ies.puerto.modelo.entity.Personaje;
-import ies.puerto.modelo.entity.Poder;
+import ies.puerto.modelo.entity.interfaces.CrudFile;
 import ies.puerto.modelo.file.abstractas.FileAbs;
 
-public class FileCsv extends FileAbs {
+public class FileCsv extends FileAbs implements CrudFile{
     
     List<Personaje>personajes;
 
@@ -37,10 +37,10 @@ public class FileCsv extends FileAbs {
     }
     public Personaje splitPersonaje(String[]datos){
         String regex = "^\"|\"$";
-        List<Poder>poderes= new ArrayList<>();
+        List<String>poderes= new ArrayList<>();
         Personaje personaje= new Personaje(datos[0],datos[1], datos[2], poderes);
         for(int i=3; i< datos.length;i++){
-            Poder poder = new Poder(datos[i].replaceAll(regex,""));
+            String poder = datos[i].replaceAll(regex,"");
             poderes.add(poder);
         }
         return personaje;
@@ -57,4 +57,35 @@ public class FileCsv extends FileAbs {
             return false;
         }
     }
+    public boolean addPersonaje(Personaje personaje){
+        if (personajes.contains(personaje)) {
+            return true;
+        }
+        personajes.add(personaje);
+        return escribirFichero(personajes);
+    }
+    public boolean eliminarPersonaje(Personaje personaje){
+        if (!personajes.contains(personaje)) {
+            return true;
+        }
+        personajes.remove(personaje);
+        return escribirFichero(personajes);
+    }
+    public boolean actualizarPersonaje(Personaje personaje){
+        if (personajes.contains(personaje)) {
+            int posicion = personajes.indexOf(personaje);
+            personajes.set(posicion, personaje);
+            return escribirFichero(personajes);
+        }
+        return false;
+    }
+    public Personaje obtenerPersonaje(String nombre){
+        Personaje personaje = new Personaje(nombre);
+        if (personajes.contains(personaje)) {
+            int posicion = personajes.indexOf(personaje);
+            personaje = personajes.get(posicion);
+            return personaje;
+        }
+        return null;
+    }   
 }
