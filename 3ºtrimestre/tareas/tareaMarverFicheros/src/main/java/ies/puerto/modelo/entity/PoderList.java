@@ -17,4 +17,11 @@ public class PoderList {
     public void setPoderes(List<Poder> poderes) {
         this.poderes = poderes;
     }
+
+    @Override
+    public String toString() {
+        return "PoderList [poderes=" + poderes + "]";
+    }
+
+    
 }

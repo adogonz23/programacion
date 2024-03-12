@@ -1,5 +1,6 @@
 package ies.puerto.modelo.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.simpleframework.xml.Element;
@@ -17,10 +18,12 @@ public class Personaje {
     private List<Poder> poderes;
     
     public final String DELIMITADOR =",";
+    public final String COMILLAS = "\"";
     
 
     
     public Personaje() {
+            poderes= new ArrayList<>();
     }
     public Personaje(String nombre) {
         this.nombre = nombre;
@@ -83,6 +86,20 @@ public class Personaje {
         return true;
     }
     public String toCsv(){
-        return nombre+DELIMITADOR+alias+DELIMITADOR+genero+DELIMITADOR+poderes;
+        return nombre+DELIMITADOR+alias+DELIMITADOR+genero+DELIMITADOR+COMILLAS+poderestoString()+COMILLAS;
+    }
+    public String poderestoString(){
+        String poderesString="";
+        for (Poder poder : poderes) {
+            int posicion;
+            if (( posicion = poderes.indexOf(poder))== poderes.size()-1) {
+                poderesString+=poder.toCsv();
+            }else{
+                poderesString+=poder.toCsv()+DELIMITADOR;
+            }
+            
+        }
+
+        return poderesString;
     }
 }

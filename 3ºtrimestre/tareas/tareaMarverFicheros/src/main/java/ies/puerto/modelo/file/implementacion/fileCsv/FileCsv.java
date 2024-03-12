@@ -36,10 +36,11 @@ public class FileCsv extends FileAbs {
         return personajes;
     }
     public Personaje splitPersonaje(String[]datos){
+        String regex = "^\"|\"$";
         List<Poder>poderes= new ArrayList<>();
         Personaje personaje= new Personaje(datos[0],datos[1], datos[2], poderes);
         for(int i=3; i< datos.length;i++){
-            Poder poder = new Poder(datos[i]);
+            Poder poder = new Poder(datos[i].replaceAll(regex,""));
             poderes.add(poder);
         }
         return personaje;
