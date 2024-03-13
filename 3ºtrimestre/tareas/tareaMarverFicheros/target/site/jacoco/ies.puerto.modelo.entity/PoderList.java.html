@@ -7,9 +7,9 @@ import org.simpleframework.xml.Root;
 
 @Root(name =&quot;poderes&quot;)
 <span class="nc" id="L9">public class PoderList {</span>
-    @ElementList(inline = true)
+    @ElementList(inline = true ,entry = &quot;poder&quot;)
     List&lt;String&gt;poderes;
-
+    
     public List&lt;String&gt; getPoderes() {
 <span class="nc" id="L14">        return poderes;</span>
     }

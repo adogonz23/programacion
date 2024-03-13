@@ -16,7 +16,11 @@ public class Personaje {
     private String genero;
     @ElementList(name = "poderes")
     private List<String> poderes;
+    
     public final String DELIMITADOR =",";
+    public Personaje(){
+
+    }
     
     public Personaje(String nombre) {
         this.nombre = nombre;
