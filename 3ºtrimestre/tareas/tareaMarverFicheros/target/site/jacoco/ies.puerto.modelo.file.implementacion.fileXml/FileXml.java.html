@@ -24,12 +24,12 @@ public class FileXml extends FileAbs implements CrudFile {
 <span class="fc" id="L24">            Persister serializer = new Persister();</span>
 <span class="fc" id="L25">            File file = new File(RUTA_FICHERO);</span>
             try {
-<span class="fc" id="L27">                PersonajeList personajeList = serializer.read(PersonajeList.class,file);</span>
-<span class="fc" id="L28">                personajes= personajeList.getPersonajes();</span>
-<span class="fc" id="L29">                return personajes;</span>
-<span class="nc" id="L30">            } catch (Exception e) {</span>
-<span class="nc" id="L31">                e.printStackTrace();</span>
-<span class="nc" id="L32">                return personajes;</span>
+<span class="nc" id="L27">                PersonajeList personajeList = serializer.read(PersonajeList.class,file);</span>
+<span class="nc" id="L28">                personajes= personajeList.getPersonajes();</span>
+<span class="nc" id="L29">                return personajes;</span>
+<span class="fc" id="L30">            } catch (Exception e) {</span>
+<span class="fc" id="L31">                e.printStackTrace();</span>
+<span class="fc" id="L32">                return personajes;</span>
             }
         
     }

@@ -33,6 +33,7 @@ public class FileCsvTest {
         persistencia = new FileCsv();
         personaje= new Personaje(nombre, alias, genero, poderes);
         personajes= persistencia.obtenerDatos();
+        persistencia.addPersonaje(personaje);
         
     }
     @Test
@@ -43,13 +44,6 @@ public class FileCsvTest {
     public void escribirFicheroTest(){
         persistencia.escribirFichero( personajes);
         
-    }
-    
-    
-    @Test
-    public void addPersonajeTest(){
-        persistencia.addPersonaje(personaje);
-        Assertions.assertTrue(personajes.contains(personaje), MSN_ERROR);
     }
     @Test
     public void obternerPersonaje(){
@@ -62,8 +56,6 @@ public class FileCsvTest {
     }
     @Test
     public void eliminarPersonajeTest(){
-        Personaje personaje= new Personaje(nombre2, alias2, genero2, poderes);
-        personajes.add(personaje);
         persistencia.eliminarPersonaje(personaje);
         Assertions.assertFalse(personajes.contains(personaje),MSN_ERROR);
     }

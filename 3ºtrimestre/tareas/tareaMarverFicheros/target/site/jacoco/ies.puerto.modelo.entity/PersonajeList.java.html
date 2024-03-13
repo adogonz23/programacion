@@ -8,7 +8,7 @@ import org.simpleframework.xml.Root;
 
 @Root (name = &quot;personajes&quot;)
 public class PersonajeList {
-    @ElementList(inline = true)
+    @ElementList(inline = true, entry = &quot;poder&quot;)
     private List&lt;Personaje&gt; personajes;
     
 
@@ -21,7 +21,7 @@ public class PersonajeList {
 <span class="fc" id="L21">    }</span>
 
     public List&lt;Personaje&gt; getPersonajes() {
-<span class="fc" id="L24">        return personajes;</span>
+<span class="nc" id="L24">        return personajes;</span>
     }
 
     public void setPersonajes(List&lt;Personaje&gt; personajes) {
