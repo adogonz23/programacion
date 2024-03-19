@@ -2,13 +2,19 @@ package ies.puerto.modelo.entity;
 
 import java.util.List;
 
+
+
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
 import com.google.gson.annotations.Expose;
 
+import ies.puerto.modelo.utilidades.Utilidades;
+
+
+
 @Root (name = "personaje")
-public class Personaje {
+public class Personaje extends Utilidades{
     @Expose
     @Element (name="nombre")
     private String nombre;
@@ -24,10 +30,9 @@ public class Personaje {
     @Element(name = "poderes")
     PoderList poderesList;
 
-    public final String DELIMITADOR =",";
-
+    
     public Personaje(){
-
+        
     }
     
     public Personaje(String nombre) {

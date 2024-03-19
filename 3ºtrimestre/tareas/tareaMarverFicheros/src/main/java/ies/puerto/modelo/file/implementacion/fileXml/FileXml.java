@@ -13,7 +13,7 @@ import ies.puerto.modelo.file.abstractas.FileAbs;
 
 public class FileXml extends FileAbs implements CrudFile {
     private List<Personaje>personajes;
-    String RUTA_FICHERO= "src/resources/data.xml";
+    String RUTA_FICHERO= obtenerPropiedades().getProperty("ruta-xml");
 
     public FileXml(){
         personajes= new ArrayList<>();

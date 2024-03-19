@@ -8,15 +8,16 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import ies.puerto.modelo.entity.Personaje;
 import ies.puerto.modelo.entity.interfaces.CrudFile;
 import ies.puerto.modelo.file.abstractas.FileAbs;
 
-public class FileCsv extends FileAbs implements CrudFile{
+public class FileCsv extends FileAbs  implements CrudFile{
     
     List<Personaje>personajes;
 
-    String RUTA_CSV= "src/resources/data.csv";
+    String RUTA_CSV= obtenerPropiedades().getProperty("ruta-csv");
 
     public List<Personaje> obtenerDatos(){
         personajes= new ArrayList<>();

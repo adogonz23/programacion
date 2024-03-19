@@ -33,7 +33,11 @@ public class Join {
         tabla2.add(fila4);
     }
 
-    Map<Integer, List<Object>> innerJoin(Map<Integer, String> tabla1, Map<Integer, Integer> tabla2){
+    Map<Integer, Integer> innerJoin(Map<Integer, String> tabla1, Map<Integer, Integer> tabla2){
+        Map<Integer, Integer> resultado = new HashMap<>();
+        if (resultado.containsKey(1)) {
+            resultado.put(1,+1);
+        }
         return null;
         
     }

@@ -2,7 +2,9 @@ package ies.puerto.modelo.file.abstractas;
 
 import java.io.File;
 
-public abstract class FileAbs {
+import ies.puerto.config.FicheroProperties;
+
+public abstract class FileAbs extends FicheroProperties{
     
     public boolean existeFichero(String path){
         File file = new File(path);

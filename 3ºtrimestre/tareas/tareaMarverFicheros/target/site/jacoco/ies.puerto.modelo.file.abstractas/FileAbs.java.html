@@ -2,14 +2,16 @@
 
 import java.io.File;
 
-<span class="fc" id="L5">public abstract class FileAbs {</span>
+import ies.puerto.config.FicheroProperties;
+
+<span class="fc" id="L7">public abstract class FileAbs extends FicheroProperties{</span>
     
     public boolean existeFichero(String path){
-<span class="fc" id="L8">        File file = new File(path);</span>
-<span class="pc bpc" id="L9" title="2 of 4 branches missed.">        if (path.isEmpty() || path == null) {</span>
-<span class="nc" id="L10">            return false;</span>
+<span class="fc" id="L10">        File file = new File(path);</span>
+<span class="pc bpc" id="L11" title="2 of 4 branches missed.">        if (path.isEmpty() || path == null) {</span>
+<span class="nc" id="L12">            return false;</span>
         }
-<span class="pc bpc" id="L12" title="2 of 4 branches missed.">        return file.isFile() &amp;&amp; file.exists();</span>
+<span class="pc bpc" id="L14" title="2 of 4 branches missed.">        return file.isFile() &amp;&amp; file.exists();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
