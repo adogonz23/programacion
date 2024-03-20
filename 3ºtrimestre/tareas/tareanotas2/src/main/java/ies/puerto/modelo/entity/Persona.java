@@ -1,14 +1,21 @@
 package ies.puerto.modelo.entity;
 
-import ies.puerto.utilidades.Utilidades;
+import org.simpleframework.xml.Element;
+import org.simpleframework.xml.Root;
 
+import ies.puerto.utilidades.Utilidades;
+@Root (name = "persona")
 public class Persona extends Utilidades{
+    @Element
     private String nombre;
+    @Element
     private int edad;
+    @Element
     private float nota;
+    @Element
     private String ciudad;
     
-    
+   
     public Persona() {
     }
     public Persona(String nombre) {

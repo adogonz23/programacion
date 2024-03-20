@@ -5,7 +5,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -16,9 +15,9 @@ import ies.puerto.modelo.entity.Persona;
 
 public class FileCsv extends FileAbs {
     
-    List<Persona>personas;
+    public List<Persona>personas;
     
-    String rutaFichero="";
+    public String rutaFichero="";
 
     public FileCsv(){
         personas= new ArrayList<>();
@@ -88,14 +87,13 @@ public class FileCsv extends FileAbs {
         } catch (Exception e) {
             return false;
         }
-        
     }
     public String fechaBackup(){
-        DateTimeFormatter formato= DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        DateTimeFormatter formato= DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         LocalDateTime fechaActual= LocalDateTime.now();
         try {
             String fechaString = fechaActual.format(formato);
-            return"src/resources/"+fechaString+".csv";
+            return"src/resources/"+fechaString.replace(" ","T")+".csv";
         } catch (Exception e) {
             e.printStackTrace();
         }
