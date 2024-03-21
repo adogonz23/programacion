@@ -11,8 +11,7 @@ import ies.puerto.modelo.entity.Personaje;
 import ies.puerto.modelo.entity.interfaces.CrudFile;
 import ies.puerto.modelo.file.implementacion.fileJson.FileJson;
 
-
-public class FileJsonTest {
+public class FilejsonTest {
     CrudFile persistencia;
     List<Personaje>personajes;
     public final String MSN_ERROR="resultado no esperado";
@@ -32,7 +31,9 @@ public class FileJsonTest {
         poderes= new ArrayList<>();
         poderes.add(nombrePoder);
         persistencia = new FileJson();
+        personaje= new Personaje(nombre, alias, genero, poderes);
         personajes= persistencia.obtenerDatos();
+        persistencia.addPersonaje(personaje);
         
     }
     @Test
@@ -43,5 +44,19 @@ public class FileJsonTest {
     public void escribirFicheroTest(){
         persistencia.escribirFichero( personajes);
         
+    }
+    @Test
+    public void obternerPersonaje(){
+        Assertions.assertEquals(personaje,persistencia.obtenerPersonaje(nombre),MSN_ERROR);
+    }
+    @Test 
+    public void actualizarPersona(){
+        personaje = new Personaje(nombre,"alias2",genero,poderes);
+        persistencia.actualizarPersonaje(personaje);
+    }
+    @Test
+    public void eliminarPersonajeTest(){
+        persistencia.eliminarPersonaje(personaje);
+        Assertions.assertFalse(personajes.contains(personaje),MSN_ERROR);
     }
 }

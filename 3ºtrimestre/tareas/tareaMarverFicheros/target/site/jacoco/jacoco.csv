@@ -1,11 +1,11 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-Proyecto file,ies.puerto.modelo.file.implementacion.fileJson,FileJson,31,60,1,1,10,10,5,3,4,3
+Proyecto file,ies.puerto.modelo.file.implementacion.fileJson,FileJson,17,136,4,6,9,26,4,8,0,7
 Proyecto file,ies.puerto.modelo.file.implementacion.fileJson,FileJson.new TypeToken() {...},0,6,0,0,0,1,0,1,0,1
 Proyecto file,ies.puerto.config,FicheroProperties,4,21,0,0,2,7,0,2,0,2
-Proyecto file,ies.puerto.modelo.file.implementacion.fileXml,FileXml,31,58,0,0,10,14,4,3,4,3
+Proyecto file,ies.puerto.modelo.file.implementacion.fileXml,FileXml,79,72,6,2,21,18,6,5,2,5
 Proyecto file,ies.puerto.modelo.file.implementacion.fileCsv,FileCsv,14,205,4,12,8,41,4,12,0,8
+Proyecto file,ies.puerto.modelo.utilidades,Utilidades,0,3,0,0,0,1,0,1,0,1
 Proyecto file,ies.puerto.modelo.entity,Personaje,13,150,7,11,5,44,6,19,0,16
 Proyecto file,ies.puerto.modelo.entity,PersonajeList,4,12,0,0,2,6,1,3,1,3
-Proyecto file,ies.puerto.modelo.entity,PoderList,13,3,0,0,6,2,3,1,3,1
-Proyecto file,ies.puerto.modelo.utilidades,Utilidades,0,6,0,0,0,2,0,1,0,1
+Proyecto file,ies.puerto.modelo.entity,PoderList,16,0,0,0,8,0,4,0,4,0
 Proyecto file,ies.puerto.modelo.file.abstractas,FileAbs,3,22,4,4,1,4,4,2,0,2

@@ -5,6 +5,7 @@ import java.util.List;
 
 
 import org.simpleframework.xml.Element;
+import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
 import com.google.gson.annotations.Expose;
@@ -15,19 +16,19 @@ import ies.puerto.modelo.utilidades.Utilidades;
 
 @Root (name = "personaje")
 public class Personaje extends Utilidades{
-    @Expose
     @Element (name="nombre")
     private String nombre;
-    @Expose
+    
     @Element(name = "alias")
     private String alias;
-    @Expose
+    
     @Element(name ="genero")
     private String genero;
-    @Expose
+
+    @ElementList 
     private List<String> poderes;
 
-    @Element(name = "poderes")
+    //@Element(name = "poderes")
     PoderList poderesList;
 
     

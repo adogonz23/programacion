@@ -1,4 +1,5 @@
 ies/puerto/modelo/abstractas/FileAbs.class
+ies/puerto/modelo/entity/PersonasContainer.class
 ies/puerto/modelo/entity/Persona.class
 ies/puerto/modelo/file/FileCsv.class
 ies/puerto/utilidades/Utilidades.class

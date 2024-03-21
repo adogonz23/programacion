@@ -13,4 +13,5 @@ public abstract class FileAbs extends FicheroProperties{
         }
         return file.isFile() && file.exists();
     }
+    
 }

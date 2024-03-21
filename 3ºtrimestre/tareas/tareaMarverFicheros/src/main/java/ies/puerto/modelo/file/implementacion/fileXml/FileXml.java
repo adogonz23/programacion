@@ -50,26 +50,41 @@ public class FileXml extends FileAbs implements CrudFile {
 
     @Override
     public boolean addPersonaje(Personaje personaje) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addPersonaje'");
+        if (personajes.contains(personaje)) {
+            return true;
+        }
+        personajes.add(personaje);
+        return escribirFichero(personajes);
     }
 
     @Override
     public boolean eliminarPersonaje(Personaje personaje) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'eliminarPersonaje'");
+        if (!personajes.contains(personaje)) {
+            return true;
+        }
+        personajes.remove(personaje);
+        return escribirFichero(personajes);
     }
 
     @Override
     public boolean actualizarPersonaje(Personaje personaje) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'actualizarPersonaje'");
+        if (personajes.contains(personaje)) {
+            int posicion = personajes.indexOf(personaje);
+            personajes.set(posicion, personaje);
+            return escribirFichero(personajes);
+        }
+        return false;
     }
 
     @Override
     public Personaje obtenerPersonaje(String nombre) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'obtenerPersonaje'");
+        Personaje personaje = new Personaje(nombre);
+        if (personajes.contains(personaje)) {
+            int posicion = personajes.indexOf(personaje);
+            personaje = personajes.get(posicion);
+            return personaje;
+        }
+        return null;
     }
     
 }

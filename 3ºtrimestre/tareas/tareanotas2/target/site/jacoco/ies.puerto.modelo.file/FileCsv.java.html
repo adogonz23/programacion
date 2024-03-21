@@ -31,8 +31,8 @@ public class FileCsv extends FileAbs {
 <span class="fc" id="L31">                    String[]datos= linea.split(&quot;,&quot;);</span>
 <span class="fc" id="L32">                    personas.add(splitPersona(datos));</span>
 <span class="fc" id="L33">                }</span>
-<span class="nc" id="L34">            } catch (Exception e) {</span>
-<span class="nc" id="L35">                e.printStackTrace();</span>
+<span class="fc" id="L34">            } catch (Exception e) {</span>
+<span class="fc" id="L35">                e.printStackTrace();</span>
 <span class="fc" id="L36">            }</span>
         }
 <span class="fc" id="L38">        return personas;</span>
@@ -93,7 +93,7 @@ public class FileCsv extends FileAbs {
 <span class="fc" id="L93">        LocalDateTime fechaActual= LocalDateTime.now();</span>
         try {
 <span class="fc" id="L95">            String fechaString = fechaActual.format(formato);</span>
-<span class="fc" id="L96">            return&quot;src/resources/&quot;+fechaString.replace(&quot; &quot;,&quot;-&quot;)+&quot;.csv&quot;;</span>
+<span class="fc" id="L96">            return&quot;src/resources/&quot;+fechaString.replace(&quot; &quot;,&quot;T&quot;)+&quot;.csv&quot;;</span>
 <span class="nc" id="L97">        } catch (Exception e) {</span>
 <span class="nc" id="L98">            e.printStackTrace();</span>
         }

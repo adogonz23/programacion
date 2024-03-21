@@ -32,8 +32,9 @@ public class FileXmlTest {
         poderes= new ArrayList<>();
         poderes.add(nombrePoder);
         persistencia = new FileXml();
+        personaje= new Personaje(nombre, alias, genero, poderes);
         personajes= persistencia.obtenerDatos();
-        
+        persistencia.addPersonaje(personaje);
     }
     @Test
     public void notNull(){
@@ -43,5 +44,19 @@ public class FileXmlTest {
     public void escribirFicheroTest(){
         persistencia.escribirFichero( personajes);
         
+    }
+    @Test
+    public void obternerPersonaje(){
+        Assertions.assertEquals(personaje,persistencia.obtenerPersonaje(nombre),MSN_ERROR);
+    }
+    @Test 
+    public void actualizarPersona(){
+        personaje = new Personaje(nombre,"alias2",genero,poderes);
+        persistencia.actualizarPersonaje(personaje);
+    }
+    @Test
+    public void eliminarPersonajeTest(){
+        persistencia.eliminarPersonaje(personaje);
+        Assertions.assertFalse(personajes.contains(personaje),MSN_ERROR);
     }
 }

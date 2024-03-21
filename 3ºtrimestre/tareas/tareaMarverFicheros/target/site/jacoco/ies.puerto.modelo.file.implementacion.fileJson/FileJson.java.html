@@ -48,26 +48,41 @@ import ies.puerto.modelo.file.abstractas.FileAbs;
 
     @Override
     public boolean addPersonaje(Personaje personaje) {
-        // TODO Auto-generated method stub
-<span class="nc" id="L52">        throw new UnsupportedOperationException(&quot;Unimplemented method 'addPersonaje'&quot;);</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        if (personajes.contains(personaje)) {</span>
+<span class="fc" id="L52">            return true;</span>
+        }
+<span class="fc" id="L54">        personajes.add(personaje);</span>
+<span class="fc" id="L55">        return escribirFichero(personajes);</span>
     }
 
     @Override
     public boolean eliminarPersonaje(Personaje personaje) {
-        // TODO Auto-generated method stub
-<span class="nc" id="L58">        throw new UnsupportedOperationException(&quot;Unimplemented method 'eliminarPersonaje'&quot;);</span>
+<span class="pc bpc" id="L60" title="1 of 2 branches missed.">        if (!personajes.contains(personaje)) {</span>
+<span class="nc" id="L61">            return true;</span>
+        }
+<span class="fc" id="L63">        personajes.remove(personaje);</span>
+<span class="fc" id="L64">        return escribirFichero(personajes);</span>
     }
 
     @Override
     public boolean actualizarPersonaje(Personaje personaje) {
-        // TODO Auto-generated method stub
-<span class="nc" id="L64">        throw new UnsupportedOperationException(&quot;Unimplemented method 'actualizarPersonaje'&quot;);</span>
+<span class="pc bpc" id="L69" title="1 of 2 branches missed.">        if (personajes.contains(personaje)) {</span>
+<span class="fc" id="L70">            int posicion = personajes.indexOf(personaje);</span>
+<span class="fc" id="L71">            personajes.set(posicion, personaje);</span>
+<span class="fc" id="L72">            return escribirFichero(personajes);</span>
+        }
+<span class="nc" id="L74">        return false;</span>
     }
 
     @Override
     public Personaje obtenerPersonaje(String nombre) {
-        // TODO Auto-generated method stub
-<span class="nc" id="L70">        throw new UnsupportedOperationException(&quot;Unimplemented method 'obtenerPersonaje'&quot;);</span>
+<span class="fc" id="L79">        Personaje personaje = new Personaje(nombre);</span>
+<span class="pc bpc" id="L80" title="1 of 2 branches missed.">        if (personajes.contains(personaje)) {</span>
+<span class="fc" id="L81">            int posicion = personajes.indexOf(personaje);</span>
+<span class="fc" id="L82">            personaje = personajes.get(posicion);</span>
+<span class="fc" id="L83">            return personaje;</span>
+        }
+<span class="nc" id="L85">        return null;</span>
     }
     
 }

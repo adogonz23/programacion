@@ -18,5 +18,13 @@
       "Trepamuros",
       "Sentido arácnido"
     ]
+  },
+  {
+    "nombre": "otroNombre",
+    "alias": "otroAlias",
+    "genero": "otroGenero",
+    "poderes": [
+      "otroPoder"
+    ]
   }
 ]
