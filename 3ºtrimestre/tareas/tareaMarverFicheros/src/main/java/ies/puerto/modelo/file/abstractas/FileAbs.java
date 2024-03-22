@@ -18,13 +18,6 @@ public abstract class FileAbs extends FicheroProperties{
         }
         return file.isFile() && file.exists();
     }
-    public boolean existeFichero2(String path){
-        File file = new File(path);
-        if (path.isEmpty()||path==null) {
-            return false;
-        }
-        return file.isFile() && file.exists();
-    }
     public boolean addPersonaje(Personaje personaje){
         if (personajes.contains(personaje)) {
             return true;

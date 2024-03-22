@@ -18,41 +18,34 @@ import ies.puerto.modelo.entity.Personaje;
         }
 <span class="pc bpc" id="L19" title="2 of 4 branches missed.">        return file.isFile() &amp;&amp; file.exists();</span>
     }
-    public boolean existeFichero2(String path){
-<span class="nc" id="L22">        File file = new File(path);</span>
-<span class="nc bnc" id="L23" title="All 4 branches missed.">        if (path.isEmpty()||path==null) {</span>
-<span class="nc" id="L24">            return false;</span>
-        }
-<span class="nc bnc" id="L26" title="All 4 branches missed.">        return file.isFile() &amp;&amp; file.exists();</span>
-    }
     public boolean addPersonaje(Personaje personaje){
-<span class="nc bnc" id="L29" title="All 2 branches missed.">        if (personajes.contains(personaje)) {</span>
-<span class="nc" id="L30">            return true;</span>
+<span class="nc bnc" id="L22" title="All 2 branches missed.">        if (personajes.contains(personaje)) {</span>
+<span class="nc" id="L23">            return true;</span>
         }
-<span class="nc" id="L32">        return personajes.add(personaje);</span>
+<span class="nc" id="L25">        return personajes.add(personaje);</span>
     }
     public boolean eliminarPersonaje(Personaje personaje){
-<span class="nc bnc" id="L35" title="All 2 branches missed.">        if (!personajes.contains(personaje)) {</span>
-<span class="nc" id="L36">            return true;</span>
+<span class="nc bnc" id="L28" title="All 2 branches missed.">        if (!personajes.contains(personaje)) {</span>
+<span class="nc" id="L29">            return true;</span>
         }
-<span class="nc" id="L38">        return personajes.remove(personaje);</span>
+<span class="nc" id="L31">        return personajes.remove(personaje);</span>
     }
     public Personaje obtenerPersonaje(String id){
-<span class="nc" id="L41">        Personaje personaje = new Personaje(id);</span>
-<span class="nc bnc" id="L42" title="All 2 branches missed.">        if (!personajes.contains(personaje)) {</span>
-<span class="nc" id="L43">            return null;</span>
+<span class="nc" id="L34">        Personaje personaje = new Personaje(id);</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">        if (!personajes.contains(personaje)) {</span>
+<span class="nc" id="L36">            return null;</span>
         }
-<span class="nc" id="L45">        int posicion = personajes.indexOf(personaje);</span>
-<span class="nc" id="L46">        return personajes.get(posicion);</span>
+<span class="nc" id="L38">        int posicion = personajes.indexOf(personaje);</span>
+<span class="nc" id="L39">        return personajes.get(posicion);</span>
         
     }
     public boolean actualizarPersonaje(Personaje personaje){
-<span class="nc bnc" id="L50" title="All 2 branches missed.">        if (!personajes.contains(personaje)) {</span>
-<span class="nc" id="L51">            return false;</span>
+<span class="nc bnc" id="L43" title="All 2 branches missed.">        if (!personajes.contains(personaje)) {</span>
+<span class="nc" id="L44">            return false;</span>
         }
-<span class="nc" id="L53">        int posicion= personajes.indexOf(personaje);</span>
-<span class="nc" id="L54">        personajes.set(posicion, personaje);</span>
-<span class="nc" id="L55">        return true;</span>
+<span class="nc" id="L46">        int posicion= personajes.indexOf(personaje);</span>
+<span class="nc" id="L47">        personajes.set(posicion, personaje);</span>
+<span class="nc" id="L48">        return true;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
