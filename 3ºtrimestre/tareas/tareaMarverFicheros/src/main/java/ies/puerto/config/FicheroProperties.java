@@ -20,5 +20,4 @@ public  class FicheroProperties {
         }
         return propiedades;
     }
-
 }

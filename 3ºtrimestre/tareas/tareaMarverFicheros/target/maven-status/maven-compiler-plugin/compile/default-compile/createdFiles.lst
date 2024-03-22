@@ -8,4 +8,3 @@ ies/puerto/config/FicheroProperties.class
 ies/puerto/modelo/file/implementacion/fileCsv/FileCsv.class
 ies/puerto/modelo/file/implementacion/fileXml/FileXml.class
 ies/puerto/modelo/file/abstractas/FileAbs.class
-ies/puerto/modelo/entity/PoderList.class

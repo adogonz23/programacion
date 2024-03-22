@@ -1,6 +1,6 @@
 package ies.puerto.modelo.file.implementacion.fileJson;
 
-
+import java.io.File;
 import java.io.FileWriter;
 import java.lang.reflect.Type;
 import java.nio.file.Files;
@@ -32,7 +32,7 @@ public class FileJson extends FileAbs implements CrudFile {
         }
         return personajes;
     }
-
+    
     @Override
     public boolean escribirFichero(List<Personaje> personajes) {
         if (existeFichero(RUTA_FICHERO)) {
@@ -45,7 +45,6 @@ public class FileJson extends FileAbs implements CrudFile {
         }
         return false;
     }
-
     @Override
     public boolean addPersonaje(Personaje personaje) {
         if (personajes.contains(personaje)) {
@@ -84,5 +83,5 @@ public class FileJson extends FileAbs implements CrudFile {
         }
         return null;
     }
-    
+   
 }

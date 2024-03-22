@@ -8,7 +8,6 @@ import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
-import com.google.gson.annotations.Expose;
 
 import ies.puerto.modelo.utilidades.Utilidades;
 
@@ -25,11 +24,9 @@ public class Personaje extends Utilidades{
     @Element(name ="genero")
     private String genero;
 
-    @ElementList 
+    @ElementList (name = "poderes", entry = "poder")
     private List<String> poderes;
 
-    //@Element(name = "poderes")
-    PoderList poderesList;
 
     
     public Personaje(){

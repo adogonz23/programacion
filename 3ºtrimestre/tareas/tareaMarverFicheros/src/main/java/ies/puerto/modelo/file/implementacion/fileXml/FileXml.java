@@ -1,10 +1,14 @@
 package ies.puerto.modelo.file.implementacion.fileXml;
 
 import java.io.File;
+import java.io.FileWriter;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import org.simpleframework.xml.core.Persister;
+
+
 
 import ies.puerto.modelo.entity.Personaje;
 import ies.puerto.modelo.entity.PersonajeList;
@@ -33,7 +37,7 @@ public class FileXml extends FileAbs implements CrudFile {
             }
         
     }
-
+    
     @Override
     public boolean escribirFichero(List<Personaje> personajes) {
         Persister serializer = new Persister();
@@ -47,7 +51,7 @@ public class FileXml extends FileAbs implements CrudFile {
             return false;
         }
     }
-
+    
     @Override
     public boolean addPersonaje(Personaje personaje) {
         if (personajes.contains(personaje)) {

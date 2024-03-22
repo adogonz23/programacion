@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ies.puerto.FileCsvTest" time="0.032" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ies.puerto.FileCsvTest" time="0.048" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/adonay/Documentos/programacion/3ºtrimestre/tareas/tareaMarverFicheros/target/surefire/surefirebooter10447608676865118134.jar /home/adonay/Documentos/programacion/3ºtrimestre/tareas/tareaMarverFicheros/target/surefire 2024-03-21T11-29-16_778-jvmRun1 surefire10206726335182288791tmp surefire_012696550842535977216tmp"/>
+    <property name="sun.java.command" value="/home/adonay/Documentos/programacion/3ºtrimestre/tareas/tareaMarverFicheros/target/surefire/surefirebooter6994035735979028344.jar /home/adonay/Documentos/programacion/3ºtrimestre/tareas/tareaMarverFicheros/target/surefire 2024-03-22T12-44-33_031-jvmRun1 surefire4207250984941056672tmp surefire_05606577973357215614tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/adonay/Documentos/programacion/3ºtrimestre/tareas/tareaMarverFicheros/target/test-classes:/home/adonay/Documentos/programacion/3ºtrimestre/tareas/tareaMarverFicheros/target/classes:/home/adonay/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/adonay/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/adonay/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/adonay/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/adonay/.m2/repository/org/mockito/mockito-core/2.21.0/mockito-core-2.21.0.jar:/home/adonay/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/home/adonay/.m2/repository/net/bytebuddy/byte-buddy-agent/1.8.15/byte-buddy-agent-1.8.15.jar:/home/adonay/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar:/home/adonay/.m2/repository/org/mockito/mockito-junit-jupiter/2.21.0/mockito-junit-jupiter-2.21.0.jar:/home/adonay/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/adonay/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/adonay/.m2/repository/org/simpleframework/simple-xml/2.7.1/simple-xml-2.7.1.jar:/home/adonay/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/home/adonay/.m2/repository/stax/stax/1.2.0/stax-1.2.0.jar:/home/adonay/.m2/repository/xpp3/xpp3/1.1.3.3/xpp3-1.1.3.3.jar:/home/adonay/.m2/repository/com/google/code/gson/gson/2.8.8/gson-2.8.8.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/adonay/Documentos/programacion/3ºtrimestre/tareas/tareaMarverFicheros/target/surefire/surefirebooter10447608676865118134.jar"/>
+    <property name="surefire.real.class.path" value="/home/adonay/Documentos/programacion/3ºtrimestre/tareas/tareaMarverFicheros/target/surefire/surefirebooter6994035735979028344.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.20.1+1-post-Ubuntu-0ubuntu122.04"/>
     <property name="user.name" value="adonay"/>
@@ -58,9 +58,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="actualizarPersona" classname="ies.puerto.FileCsvTest" time="0.024"/>
-  <testcase name="eliminarPersonajeTest" classname="ies.puerto.FileCsvTest" time="0.001"/>
-  <testcase name="escribirFicheroTest" classname="ies.puerto.FileCsvTest" time="0.001"/>
-  <testcase name="obternerPersonaje" classname="ies.puerto.FileCsvTest" time="0.003"/>
-  <testcase name="notNull" classname="ies.puerto.FileCsvTest" time="0.001"/>
+  <testcase name="actualizarPersona" classname="ies.puerto.FileCsvTest" time="0.033"/>
+  <testcase name="eliminarPersonajeTest" classname="ies.puerto.FileCsvTest" time="0.002"/>
+  <testcase name="escribirFicheroTest" classname="ies.puerto.FileCsvTest" time="0.003"/>
+  <testcase name="obternerPersonaje" classname="ies.puerto.FileCsvTest" time="0.001"/>
+  <testcase name="notNull" classname="ies.puerto.FileCsvTest" time="0.002"/>
 </testsuite>

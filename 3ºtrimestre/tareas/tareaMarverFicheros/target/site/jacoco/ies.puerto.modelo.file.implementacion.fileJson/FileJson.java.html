@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FileJson.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Proyecto file</a> &gt; <a href="index.source.html" class="el_package">ies.puerto.modelo.file.implementacion.fileJson</a> &gt; <span class="el_source">FileJson.java</span></div><h1>FileJson.java</h1><pre class="source lang-java linenums">package ies.puerto.modelo.file.implementacion.fileJson;
 
-
+import java.io.File;
 import java.io.FileWriter;
 import java.lang.reflect.Type;
 import java.nio.file.Files;
@@ -32,7 +32,7 @@ import ies.puerto.modelo.file.abstractas.FileAbs;
         }
 <span class="nc" id="L33">        return personajes;</span>
     }
-
+    
     @Override
     public boolean escribirFichero(List&lt;Personaje&gt; personajes) {
 <span class="pc bpc" id="L38" title="1 of 2 branches missed.">        if (existeFichero(RUTA_FICHERO)) {</span>
@@ -45,45 +45,44 @@ import ies.puerto.modelo.file.abstractas.FileAbs;
         }
 <span class="nc" id="L46">        return false;</span>
     }
-
     @Override
     public boolean addPersonaje(Personaje personaje) {
-<span class="fc bfc" id="L51" title="All 2 branches covered.">        if (personajes.contains(personaje)) {</span>
-<span class="fc" id="L52">            return true;</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        if (personajes.contains(personaje)) {</span>
+<span class="fc" id="L51">            return true;</span>
         }
-<span class="fc" id="L54">        personajes.add(personaje);</span>
-<span class="fc" id="L55">        return escribirFichero(personajes);</span>
+<span class="fc" id="L53">        personajes.add(personaje);</span>
+<span class="fc" id="L54">        return escribirFichero(personajes);</span>
     }
 
     @Override
     public boolean eliminarPersonaje(Personaje personaje) {
-<span class="pc bpc" id="L60" title="1 of 2 branches missed.">        if (!personajes.contains(personaje)) {</span>
-<span class="nc" id="L61">            return true;</span>
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">        if (!personajes.contains(personaje)) {</span>
+<span class="nc" id="L60">            return true;</span>
         }
-<span class="fc" id="L63">        personajes.remove(personaje);</span>
-<span class="fc" id="L64">        return escribirFichero(personajes);</span>
+<span class="fc" id="L62">        personajes.remove(personaje);</span>
+<span class="fc" id="L63">        return escribirFichero(personajes);</span>
     }
 
     @Override
     public boolean actualizarPersonaje(Personaje personaje) {
-<span class="pc bpc" id="L69" title="1 of 2 branches missed.">        if (personajes.contains(personaje)) {</span>
-<span class="fc" id="L70">            int posicion = personajes.indexOf(personaje);</span>
-<span class="fc" id="L71">            personajes.set(posicion, personaje);</span>
-<span class="fc" id="L72">            return escribirFichero(personajes);</span>
+<span class="pc bpc" id="L68" title="1 of 2 branches missed.">        if (personajes.contains(personaje)) {</span>
+<span class="fc" id="L69">            int posicion = personajes.indexOf(personaje);</span>
+<span class="fc" id="L70">            personajes.set(posicion, personaje);</span>
+<span class="fc" id="L71">            return escribirFichero(personajes);</span>
         }
-<span class="nc" id="L74">        return false;</span>
+<span class="nc" id="L73">        return false;</span>
     }
 
     @Override
     public Personaje obtenerPersonaje(String nombre) {
-<span class="fc" id="L79">        Personaje personaje = new Personaje(nombre);</span>
-<span class="pc bpc" id="L80" title="1 of 2 branches missed.">        if (personajes.contains(personaje)) {</span>
-<span class="fc" id="L81">            int posicion = personajes.indexOf(personaje);</span>
-<span class="fc" id="L82">            personaje = personajes.get(posicion);</span>
-<span class="fc" id="L83">            return personaje;</span>
+<span class="fc" id="L78">        Personaje personaje = new Personaje(nombre);</span>
+<span class="pc bpc" id="L79" title="1 of 2 branches missed.">        if (personajes.contains(personaje)) {</span>
+<span class="fc" id="L80">            int posicion = personajes.indexOf(personaje);</span>
+<span class="fc" id="L81">            personaje = personajes.get(posicion);</span>
+<span class="fc" id="L82">            return personaje;</span>
         }
-<span class="nc" id="L85">        return null;</span>
+<span class="nc" id="L84">        return null;</span>
     }
-    
+   
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -4,9 +4,9 @@
       <alias>Tony Stark</alias>
       <genero>Masculino</genero>
       <poderes class="java.util.ArrayList">
-         <string>Vuelo</string>
-         <string>Armadura tecnológica avanzada</string>
-         <string>Rayos láser</string>
+         <poder>Vuelo</poder>
+         <poder>Armadura tecnológica avanzada</poder>
+         <poder>Rayos láser</poder>
       </poderes>
    </personaje>
    <personaje>
@@ -14,9 +14,9 @@
       <alias>Peter Parker</alias>
       <genero>Masculino</genero>
       <poderes class="java.util.ArrayList">
-         <string>Agilidad sobrehumana</string>
-         <string>Trepamuros</string>
-         <string>Sentido arácnido</string>
+         <poder>Agilidad sobrehumana</poder>
+         <poder>Trepamuros</poder>
+         <poder>Sentido arácnido</poder>
       </poderes>
    </personaje>
    <personaje>
@@ -24,7 +24,7 @@
       <alias>otroAlias</alias>
       <genero>otroGenero</genero>
       <poderes class="java.util.ArrayList">
-         <string>otroPoder</string>
+         <poder>otroPoder</poder>
       </poderes>
    </personaje>
 </personajes>
